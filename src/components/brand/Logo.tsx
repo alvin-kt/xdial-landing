@@ -7,52 +7,31 @@ interface LogoProps {
 }
 
 /**
- * The xDial lockup: the crossed-stroke "X" mark plus the wordmark.
+ * The xDial AI lockup.
  *
- * Rebuilt as vector + live text because the supplied asset
- * (`assets/codia-studio-31m446.SVG`) is a 27×30px raster and would not survive
- * being scaled up on a high-density display.
+ * The supplied artwork (`assets/xDial Logo 1.png`) is a stacked mark-over-
+ * wordmark drawn in white on black; it ships here cropped to its content with
+ * the black keyed out, so it sits directly on the navy surfaces. On the light
+ * footer the same file is placed on a navy tile — recolouring the wordmark
+ * would lose the gold-to-blue "AI" gradient.
  */
 export function Logo({ tone = 'light', className }: LogoProps) {
   return (
-    <span className={cn('inline-flex items-center gap-2', className)}>
-      <XMark className="size-7 shrink-0" />
-      <span
-        className={cn(
-          'text-[1.375rem] leading-none font-bold tracking-[-0.02em]',
-          tone === 'light' ? 'text-white' : 'text-ink-900',
-        )}
-      >
-        xDial
-      </span>
+    <span
+      className={cn(
+        'inline-flex shrink-0 items-center',
+        tone === 'dark' && 'rounded-xl bg-navy-950 px-2.5 py-2',
+        className,
+      )}
+    >
+      <img
+        src="/images/xdial-logo.png"
+        width={847}
+        height={781}
+        alt="xDial AI"
+        className="h-10 w-auto select-none lg:h-11"
+        draggable={false}
+      />
     </span>
-  )
-}
-
-/** The mark on its own — two tapered strokes crossing, in two brand blues. */
-export function XMark({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
-      <defs>
-        <linearGradient id="xdial-mark-a" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#3b82f6" />
-          <stop offset="1" stopColor="#1d4ed8" />
-        </linearGradient>
-        <linearGradient id="xdial-mark-b" x1="1" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#60a5fa" />
-          <stop offset="1" stopColor="#2563eb" />
-        </linearGradient>
-      </defs>
-      {/* Back stroke: top-right to bottom-left. */}
-      <path
-        d="M25.4 3.6a2.9 2.9 0 0 1 .6 4.3L10.7 27.2a2.9 2.9 0 1 1-4.5-3.6L21.5 4.3a2.9 2.9 0 0 1 3.9-.7Z"
-        fill="url(#xdial-mark-b)"
-      />
-      {/* Front stroke: top-left to bottom-right, notched at the crossing. */}
-      <path
-        d="M6.6 3.6a2.9 2.9 0 0 1 3.9.7l4.6 5.8-3.7 4.6-5.4-6.8a2.9 2.9 0 0 1 .6-4.3Zm10.1 13.7 3.7-4.6 5.6 7a2.9 2.9 0 1 1-4.5 3.6l-4.8-6Z"
-        fill="url(#xdial-mark-a)"
-      />
-    </svg>
   )
 }

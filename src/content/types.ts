@@ -25,12 +25,6 @@ export interface ProcessStep {
   readonly label: string
 }
 
-/** A row in the sample verification report. */
-export interface ReportRow {
-  readonly label: string
-  readonly value: string
-}
-
 export type ActivityState = 'done' | 'active' | 'pending'
 
 /** One line of the live call log. */

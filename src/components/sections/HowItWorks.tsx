@@ -39,11 +39,13 @@ export function HowItWorks() {
           </div>
 
           {/* ------------------------------------------------------- steps -- */}
-          <ol className="grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-3 lg:flex lg:items-start lg:gap-x-1">
+          {/* Wrapping flex rather than a fixed grid: with an odd number of steps
+              a wrapped row stays centred instead of leaving a gap on the end. */}
+          <ol className="flex flex-wrap justify-center gap-x-6 gap-y-9 sm:gap-x-8 lg:flex-nowrap lg:items-start lg:justify-between lg:gap-x-2">
             {PROCESS_STEPS.map(({ icon: Icon, label }, index) => (
               <li
                 key={label}
-                className="relative flex flex-col items-center text-center lg:min-w-0 lg:flex-1"
+                className="relative flex w-28 flex-col items-center text-center sm:w-32 lg:w-auto lg:min-w-0 lg:flex-1"
               >
                 <span className="flex size-16 items-center justify-center rounded-full bg-white shadow-step lg:size-[4.5rem]">
                   <Icon aria-hidden="true" className="size-7 text-brand-600 lg:size-[2.125rem]" />

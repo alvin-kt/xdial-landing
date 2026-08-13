@@ -5,7 +5,6 @@ import { ClosingCta } from '@/components/sections/ClosingCta'
 import { Hero } from '@/components/sections/Hero'
 import { HowItWorks } from '@/components/sections/HowItWorks'
 import { ShowcaseGrid } from '@/components/sections/ShowcaseGrid'
-import { TrustStrip } from '@/components/sections/TrustStrip'
 
 export default function App() {
   return (
@@ -21,7 +20,6 @@ export default function App() {
 
       <main id="main">
         <Hero />
-        <TrustStrip />
         <HowItWorks />
         <Capabilities />
         <ShowcaseGrid />

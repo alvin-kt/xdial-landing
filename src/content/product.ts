@@ -2,7 +2,6 @@ import {
   BookText,
   ClipboardCheck,
   FileCheck,
-  Hash,
   Monitor,
   Phone,
   ShieldCheck,
@@ -26,8 +25,7 @@ export const PROCESS_STEPS = [
   { icon: Phone, label: 'AI places\nthe call' },
   { icon: DialpadIcon, label: 'Navigates the\nphone system' },
   { icon: User, label: 'Speaks with\nrepresentative' },
-  { icon: ClipboardCheck, label: 'Collects\nbenefits' },
-  { icon: Hash, label: 'Captures reference\nnumber' },
+  { icon: ClipboardCheck, label: 'Collects\ninformation' },
   { icon: FileCheck, label: 'Verification\ncomplete' },
 ] as const satisfies readonly ProcessStep[]
 

@@ -42,7 +42,17 @@
       "Bash(node shoot.mjs)",
       "Bash(node sidebyside.mjs)",
       "Bash(python3 -)",
-      "Bash(node hero2.mjs)"
+      "Bash(node hero2.mjs)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g hasAlpha -g format \"assets/xDial Logo 1.png\")",
+      "Bash(python3 -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(KEY=1 PAD=12 T=40 node /private/tmp/claude-501/-Users-admin-Documents-xdial-landing/08a8002b-275b-41e3-b05f-3691a25329b4/scratchpad/pngcrop.mjs 'assets/xDial Logo 1.png' /private/tmp/claude-501/-Users-admin-Documents-xdial-landing/08a8002b-275b-41e3-b05f-3691a25329b4/scratchpad/xdial-logo.png)",
+      "Bash(SCRATCH=/private/tmp/claude-501/-Users-admin-Documents-xdial-landing/08a8002b-275b-41e3-b05f-3691a25329b4/scratchpad && cp $SCRATCH/xdial-logo.png public/images/xdial-logo.png && ls -l public/images/xdial-logo.png)",
+      "Bash(git rm *)",
+      "Read(//Users/admin/Library/Caches/ms-playwright/**)",
+      "Bash(git -C /Users/admin/Documents/xdial-landing status --short)"
+    ],
+    "additionalDirectories": [
+      "/Users/admin/Documents/xdial-landing/public/images"
     ]
   }
 }
