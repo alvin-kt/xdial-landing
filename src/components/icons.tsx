@@ -19,6 +19,37 @@ export function DialpadIcon(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+/**
+ * A lined document with a green confirmation badge on its corner — the mark the
+ * reference design uses wherever a request has been submitted or completed.
+ *
+ * Two-tone by design: the page takes `currentColor` like any other icon, while
+ * the badge stays green so the "done" signal survives on blue or dark tiles.
+ */
+export function DocumentCheckIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      {/* Page with a folded top-right corner. */}
+      <path d="M13.25 2.75H6.4a1.65 1.65 0 0 0-1.65 1.65v15.2a1.65 1.65 0 0 0 1.65 1.65h5.1" />
+      <path d="M13.25 2.75 18.5 8v5.1" />
+      <path d="M13.25 2.75V7a1 1 0 0 0 1 1h4.25" />
+      <path d="M8 9.9h4.4M8 13.1h4.4M8 16.3h2.8" />
+      {/* Confirmation badge, drawn over the page's lower corner. */}
+      <circle cx="17.2" cy="17.2" r="4.05" fill="#ffffff" stroke="var(--color-success-fg)" />
+      <path d="m15.4 17.25 1.25 1.25 2.35-2.5" stroke="var(--color-success-fg)" />
+    </svg>
+  )
+}
+
 /** A hash enclosed in a ring, for "captures reference number". */
 export function HashCircleIcon(props: SVGProps<SVGSVGElement>) {
   return (

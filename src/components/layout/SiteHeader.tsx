@@ -13,12 +13,14 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 import { HERO } from '@/content/hero'
-import { PRIMARY_NAV } from '@/content/navigation'
+import { PRIMARY_NAV, ROUTES } from '@/content/navigation'
 import { useScrolled } from '@/hooks/use-scrolled'
+import { SiteLink, useRouter } from '@/lib/router'
 import { cn } from '@/lib/utils'
 
 export function SiteHeader() {
   const scrolled = useScrolled()
+  const { path } = useRouter()
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -34,40 +36,46 @@ export function SiteHeader() {
       <Container>
         <div className="flex h-16 items-center gap-4 lg:h-[4.5rem]">
           {/* Logo and nav sit together on the left, as in the reference. */}
-          <a
-            href="#top"
+          <SiteLink
+            href={ROUTES.home}
             className="rounded-sm"
-            aria-label="xDial — back to top"
+            aria-label="xDial — home"
             onClick={() => setMenuOpen(false)}
           >
             <Logo />
-          </a>
+          </SiteLink>
 
           {/* Desktop navigation */}
           <nav aria-label="Main" className="hidden lg:block lg:pl-10 xl:pl-14">
             <ul className="flex items-center gap-7 xl:gap-9">
               {PRIMARY_NAV.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <SiteLink
                     href={link.href}
-                    className="text-base text-white/85 transition-colors hover:text-white"
+                    aria-current={link.href === path ? 'page' : undefined}
+                    className={cn(
+                      'relative block py-1 text-base transition-colors',
+                      link.href === path
+                        ? 'text-white after:absolute after:inset-x-0 after:-bottom-1 after:h-0.5 after:rounded-full after:bg-brand-500'
+                        : 'text-white/85 hover:text-white',
+                    )}
                   >
                     {link.label}
-                  </a>
+                  </SiteLink>
                 </li>
               ))}
             </ul>
           </nav>
 
           <div className="ml-auto flex items-center gap-2 sm:gap-5">
-            <a
-              href="#log-in"
+            <SiteLink
+              href="/#log-in"
               className="hidden text-base text-white/85 transition-colors hover:text-white sm:inline"
             >
               Log in
-            </a>
+            </SiteLink>
             <Button asChild variant="brand" size="nav" className="hidden sm:inline-flex">
-              <a href={HERO.primaryCta.href}>{HERO.primaryCta.label}</a>
+              <SiteLink href={HERO.primaryCta.href}>{HERO.primaryCta.label}</SiteLink>
             </Button>
 
             {/* Mobile navigation */}
@@ -94,12 +102,16 @@ export function SiteHeader() {
                     {PRIMARY_NAV.map((link) => (
                       <li key={link.href}>
                         <SheetClose asChild>
-                          <a
+                          <SiteLink
                             href={link.href}
-                            className="block rounded-md py-3 text-lg text-white/85 transition-colors hover:text-white"
+                            aria-current={link.href === path ? 'page' : undefined}
+                            className={cn(
+                              'block rounded-md py-3 text-lg transition-colors hover:text-white',
+                              link.href === path ? 'font-medium text-white' : 'text-white/85',
+                            )}
                           >
                             {link.label}
-                          </a>
+                          </SiteLink>
                         </SheetClose>
                       </li>
                     ))}
@@ -109,12 +121,12 @@ export function SiteHeader() {
                 <div className="mt-auto flex flex-col gap-3 border-t border-white/10 p-4">
                   <SheetClose asChild>
                     <Button asChild variant="brandOutline" size="cta">
-                      <a href="#log-in">Log in</a>
+                      <SiteLink href="/#log-in">Log in</SiteLink>
                     </Button>
                   </SheetClose>
                   <SheetClose asChild>
                     <Button asChild variant="brand" size="cta">
-                      <a href={HERO.primaryCta.href}>{HERO.primaryCta.label}</a>
+                      <SiteLink href={HERO.primaryCta.href}>{HERO.primaryCta.label}</SiteLink>
                     </Button>
                   </SheetClose>
                 </div>

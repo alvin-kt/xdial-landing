@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, Play } from 'lucide-react'
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/button'
 import { CLOSING_CTA } from '@/content/product'
+import { SiteLink } from '@/lib/router'
 
 export function ClosingCta() {
   return (
@@ -24,12 +25,12 @@ export function ClosingCta() {
 
             <div className="flex shrink-0 flex-col items-start gap-4 lg:items-center">
               <Button asChild variant="brand" size="cta" className="w-full sm:w-auto">
-                <a href={CLOSING_CTA.primaryCta.href}>
+                <SiteLink href={CLOSING_CTA.primaryCta.href}>
                   {CLOSING_CTA.primaryCta.label}
                   <ArrowRight aria-hidden="true" />
-                </a>
+                </SiteLink>
               </Button>
-              <a
+              <SiteLink
                 href={CLOSING_CTA.secondaryCta.href}
                 className="inline-flex items-center gap-2 text-base text-white/85 transition-colors hover:text-white"
               >
@@ -40,7 +41,7 @@ export function ClosingCta() {
                 >
                   <Play className="size-2 translate-x-px fill-current" />
                 </span>
-              </a>
+              </SiteLink>
             </div>
           </div>
         </div>

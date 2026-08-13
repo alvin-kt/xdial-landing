@@ -4,6 +4,7 @@ import { Container } from '@/components/layout/Container'
 import { HeroBubble } from '@/components/sections/HeroBubble'
 import { Button } from '@/components/ui/button'
 import { HERO, HERO_BUBBLES, HERO_HIGHLIGHTS } from '@/content/hero'
+import { SiteLink } from '@/lib/router'
 
 export function Hero() {
   return (
@@ -28,13 +29,13 @@ export function Hero() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Button asChild variant="brand" size="cta">
-                <a href={HERO.primaryCta.href}>
+                <SiteLink href={HERO.primaryCta.href}>
                   {HERO.primaryCta.label}
                   <ArrowRight aria-hidden="true" />
-                </a>
+                </SiteLink>
               </Button>
               <Button asChild variant="brandOutline" size="cta">
-                <a href={HERO.secondaryCta.href}>
+                <SiteLink href={HERO.secondaryCta.href}>
                   <span
                     aria-hidden="true"
                     className="flex size-6 items-center justify-center rounded-full border border-white/60"
@@ -42,7 +43,7 @@ export function Hero() {
                     <Play className="size-2.5 translate-x-px fill-current" />
                   </span>
                   {HERO.secondaryCta.label}
-                </a>
+                </SiteLink>
               </Button>
             </div>
 

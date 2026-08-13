@@ -1,12 +1,34 @@
+import { useEffect } from 'react'
+
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { SiteHeader } from '@/components/layout/SiteHeader'
-import { Capabilities } from '@/components/sections/Capabilities'
-import { ClosingCta } from '@/components/sections/ClosingCta'
-import { Hero } from '@/components/sections/Hero'
-import { HowItWorks } from '@/components/sections/HowItWorks'
-import { ShowcaseGrid } from '@/components/sections/ShowcaseGrid'
+import { ROUTES } from '@/content/navigation'
+import { useRouter } from '@/lib/router'
+import { HomePage } from '@/pages/HomePage'
+import { HowItWorksPage } from '@/pages/HowItWorksPage'
+
+/** Page titles are set per route so history entries stay tellable apart. */
+const PAGES = {
+  [ROUTES.home]: {
+    component: HomePage,
+    title: 'xDial — Insurance Verification, Automated',
+  },
+  [ROUTES.howItWorks]: {
+    component: HowItWorksPage,
+    title: 'How It Works — xDial',
+  },
+} as const
 
 export default function App() {
+  const { path } = useRouter()
+  // Anything unrecognised falls back to the landing page.
+  const page = PAGES[path as keyof typeof PAGES] ?? PAGES[ROUTES.home]
+  const Page = page.component
+
+  useEffect(() => {
+    document.title = page.title
+  }, [page.title])
+
   return (
     <>
       <a
@@ -19,14 +41,10 @@ export default function App() {
       <SiteHeader />
 
       <main id="main">
-        <Hero />
-        <HowItWorks />
-        <Capabilities />
-        <ShowcaseGrid />
-        <ClosingCta />
+        <Page />
       </main>
 
-      <SiteFooter />
+      <SiteFooter hipaaBadge={path === ROUTES.howItWorks} />
     </>
   )
 }

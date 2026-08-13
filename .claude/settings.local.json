@@ -49,7 +49,22 @@
       "Bash(SCRATCH=/private/tmp/claude-501/-Users-admin-Documents-xdial-landing/08a8002b-275b-41e3-b05f-3691a25329b4/scratchpad && cp $SCRATCH/xdial-logo.png public/images/xdial-logo.png && ls -l public/images/xdial-logo.png)",
       "Bash(git rm *)",
       "Read(//Users/admin/Library/Caches/ms-playwright/**)",
-      "Bash(git -C /Users/admin/Documents/xdial-landing status --short)"
+      "Bash(git -C /Users/admin/Documents/xdial-landing status --short)",
+      "Bash(cp \"assets/20235017-3c40-41e7-949e-e21823fb3f29.png\" public/images/ivrrex-call-flow.png)",
+      "Bash(cp \"assets/a2fb16d7-041f-4c94-894b-52e15e8102d7.png\" public/images/ivrrex-calling.png)",
+      "Bash(cp \"assets/3f465a65-9ea5-4550-a592-b5f914eaaab0.png\" public/images/ivrrex-thumbsup.png)",
+      "Bash(cp \"assets/edb55764-8cad-4415-a24b-05ad6c2bda3e.png\" public/images/ivrrex-head.png)",
+      "Bash(command -v chromium chrome \"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1280,4200 --screenshot=hiw-desktop.png --virtual-time-budget=4000 http://localhost:4173/how-it-works)",
+      "Bash(timeout 60 npx --yes playwright@latest --version)",
+      "Bash(npx --yes playwright@latest --version)",
+      "Bash(node check.mjs)",
+      "Bash(node check2.mjs)",
+      "Bash(node check3.mjs)",
+      "Bash(pkill -f \"vite preview\")",
+      "Bash(sips -g pixelWidth -g pixelHeight \"How it works website.png\")",
+      "Bash(python3 -c \"import PIL; print\\('PIL ok', PIL.__version__\\)\")",
+      "Bash(node check4.mjs)"
     ],
     "additionalDirectories": [
       "/Users/admin/Documents/xdial-landing/public/images"
