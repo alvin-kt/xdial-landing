@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import '@fontsource-variable/inter';
+
+@import './styles/theme.css';
+@import './styles/utilities.css';
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply border-border;
+  }
+
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    /* Offset in-page anchors by the sticky header height. */
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-body text-ink-600 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading text-ink-900;
+  }
+
+  /* A single, consistent focus ring everywhere — including the dark sections,
+     where the default ring colour would not carry enough contrast. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brand-200);
+    color: var(--color-ink-900);
+  }
+
+  /* Respect the OS "reduce motion" setting: kill transitions/animations and
+     the smooth-scroll, but leave layout untouched. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

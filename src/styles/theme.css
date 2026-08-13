@@ -1,0 +1,188 @@
+/* =============================================================================
+   xDial design tokens
+   -----------------------------------------------------------------------------
+   Every value here is sampled from the reference design (assets/landing page.png)
+   or derived from measured cap-heights in it. The reference render is 1024px
+   wide with a 960px content column; the type scale below is that measurement
+   multiplied by 1.25, which keeps the reference's proportions on the 1280px
+   content column used here.
+   ============================================================================= */
+
+@theme {
+  /* ---------------------------------------------------------------- fonts -- */
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: var(--font-sans);
+
+  /* --------------------------------------------------------------- brand --- */
+  /* Sampled: buttons #175BEF / #195CED, accent copy #1672F6 / #1877FE */
+  --color-brand-50: #eff5ff;
+  --color-brand-100: #dbe8fe;
+  --color-brand-200: #bfd6fe;
+  --color-brand-300: #93bafd;
+  --color-brand-400: #6096fa;
+  --color-brand-500: #2b7bf7; /* "Automated." / "IVRRex" accent copy */
+  --color-brand-600: #175bf0; /* primary buttons, links, icons */
+  --color-brand-700: #1147cc; /* hover */
+  --color-brand-800: #143ba3;
+  --color-brand-900: #16357f;
+
+  /* ---------------------------------------------------------------- navy --- */
+  /* The dark surfaces, ordered light-to-dark as the number rises. */
+  --color-navy-600: #1d3552;
+  --color-navy-700: #12233a; /* hairlines / borders on dark */
+  --color-navy-750: #0a172b; /* live-activity panel */
+  --color-navy-800: #08162a; /* trusted-by strip */
+  --color-navy-850: #020e20; /* closing CTA banner */
+  --color-navy-900: #000a1c; /* hero gradient, lower */
+  --color-navy-950: #000713; /* header + hero base */
+
+  /* ------------------------------------------------------------ surfaces --- */
+  --color-mist: #f6f8fc; /* light sections and footer */
+  --color-sky-tint: #eff5fc; /* integrations panel, avatar wells */
+
+  /* ----------------------------------------------------------------- ink --- */
+  --color-ink-900: #0a1628; /* headings on light */
+  --color-ink-700: #344256;
+  --color-ink-600: #4a5a70; /* body copy on light */
+  /* Darkened from the sampled #6b7a90, which measured 4.36:1 on white and so
+     missed WCAG AA for the 13px labels that use it. #64728a is 4.87:1. */
+  --color-ink-500: #64728a; /* muted / labels */
+  --color-ink-400: #94a3b8;
+  --color-ink-200: #dbe2ec; /* hairlines on light */
+
+  /* on dark surfaces */
+  --color-frost-100: #ffffff;
+  --color-frost-300: #c7d3e4; /* hero paragraph */
+  --color-frost-500: #8695ac; /* trusted-by label, footer meta */
+
+  /* -------------------------------------------------------------- accents -- */
+  --color-success-bg: #def2e4;
+  --color-success-fg: #1b7a5a;
+  --color-neon-green: #4dd777; /* IVRREX bubble + activity log */
+  --color-neon-pink: #f8647a; /* hold-music bubble */
+  --color-grid-line: #195d92; /* hero perspective floor */
+
+  /* ------------------------------------------------------------ type scale -- */
+  /* name              size      line-height        tracking */
+  --text-eyebrow: 0.8125rem; /* 13px */
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.18em;
+  --text-eyebrow--font-weight: 600;
+
+  --text-meta: 0.8125rem; /* 13px  — timestamps, footnotes */
+  --text-meta--line-height: 1.45;
+
+  --text-sm: 0.875rem; /* 14px  — captions, badges */
+  --text-sm--line-height: 1.5;
+
+  --text-base: 0.9375rem; /* 15px  — nav, feature titles, step labels */
+  --text-base--line-height: 1.55;
+
+  --text-body: 1rem; /* 16px  — general body */
+  --text-body--line-height: 1.65;
+
+  --text-lead: 1.125rem; /* 18px  — hero paragraph */
+  --text-lead--line-height: 1.7;
+
+  --text-h4: 1.125rem; /* 18px  — card titles */
+  --text-h4--line-height: 1.4;
+  --text-h4--letter-spacing: -0.01em;
+  --text-h4--font-weight: 600;
+
+  --text-h3: 1.5rem; /* 24px  — panel headings */
+  --text-h3--line-height: 1.3;
+  --text-h3--letter-spacing: -0.018em;
+  --text-h3--font-weight: 700;
+
+  --text-h2: 1.875rem; /* 30px  — section headings */
+  --text-h2--line-height: 1.22;
+  --text-h2--letter-spacing: -0.022em;
+  --text-h2--font-weight: 700;
+
+  --text-h1: 3.5rem; /* 56px  — hero headline */
+  --text-h1--line-height: 1.06;
+  --text-h1--letter-spacing: -0.03em;
+  --text-h1--font-weight: 700;
+
+  /* --------------------------------------------------------------- layout -- */
+  --container-content: 80rem; /* 1280px content column */
+
+  /* -------------------------------------------------------------- shadows -- */
+  --shadow-card: 0 1px 2px 0 rgb(10 22 40 / 0.04), 0 8px 24px -6px rgb(10 22 40 / 0.08);
+  --shadow-card-lg: 0 1px 3px 0 rgb(10 22 40 / 0.05), 0 18px 44px -12px rgb(10 22 40 / 0.12);
+  --shadow-step: 0 1px 2px 0 rgb(10 22 40 / 0.05), 0 6px 16px -4px rgb(10 22 40 / 0.1);
+  --shadow-brand: 0 8px 24px -8px rgb(23 91 240 / 0.5);
+
+  /* --------------------------------------------------------------- easing -- */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* -----------------------------------------------------------------------------
+   shadcn/ui semantic variables, remapped onto the xDial palette so the
+   primitives (Button, Card, Badge, Sheet…) inherit the brand by default.
+   -------------------------------------------------------------------------- */
+:root {
+  --radius: 0.625rem;
+
+  --background: #ffffff;
+  --foreground: var(--color-ink-900);
+
+  --card: #ffffff;
+  --card-foreground: var(--color-ink-900);
+
+  --popover: #ffffff;
+  --popover-foreground: var(--color-ink-900);
+
+  --primary: var(--color-brand-600);
+  --primary-foreground: #ffffff;
+
+  --secondary: var(--color-mist);
+  --secondary-foreground: var(--color-ink-900);
+
+  --muted: var(--color-mist);
+  --muted-foreground: var(--color-ink-500);
+
+  --accent: var(--color-brand-50);
+  --accent-foreground: var(--color-brand-700);
+
+  --destructive: #dc2626;
+
+  --border: var(--color-ink-200);
+  --input: var(--color-ink-200);
+  --ring: var(--color-brand-500);
+}
+
+/* -----------------------------------------------------------------------------
+   Expose the semantic variables above as Tailwind colour utilities
+   (`bg-background`, `border-border`, `text-muted-foreground`, …) and derive the
+   radius steps the shadcn primitives expect. `inline` keeps the values as
+   `var()` references so they stay themable at runtime.
+   -------------------------------------------------------------------------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
