@@ -3,6 +3,8 @@ import { cn } from '@/lib/utils'
 interface LogoProps {
   /** `light` for the dark header/CTA surfaces, `dark` for the light footer. */
   tone?: 'light' | 'dark'
+  /** `sm` is the footer lockup, which the reference draws much smaller. */
+  size?: 'sm' | 'md'
   className?: string
 }
 
@@ -15,12 +17,15 @@ interface LogoProps {
  * footer the same file is placed on a navy tile — recolouring the wordmark
  * would lose the gold-to-blue "AI" gradient.
  */
-export function Logo({ tone = 'light', className }: LogoProps) {
+export function Logo({ tone = 'light', size = 'md', className }: LogoProps) {
   return (
     <span
       className={cn(
         'inline-flex shrink-0 items-center',
-        tone === 'dark' && 'rounded-xl bg-navy-950 px-2.5 py-2',
+        tone === 'dark' &&
+          (size === 'sm'
+            ? 'rounded-lg bg-navy-950 px-2 py-1'
+            : 'rounded-xl bg-navy-950 px-2.5 py-2'),
         className,
       )}
     >
@@ -29,7 +34,7 @@ export function Logo({ tone = 'light', className }: LogoProps) {
         width={847}
         height={781}
         alt="xDial AI"
-        className="h-10 w-auto select-none lg:h-11"
+        className={cn('w-auto select-none', size === 'sm' ? 'h-6' : 'h-10 lg:h-11')}
         draggable={false}
       />
     </span>

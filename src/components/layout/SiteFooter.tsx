@@ -17,21 +17,28 @@ export function SiteFooter({ hipaaBadge = false }: SiteFooterProps) {
   return (
     <footer id="resources" className="bg-mist">
       <Container>
-        <div className="flex flex-col gap-6 border-t border-ink-200 py-8 lg:flex-row lg:items-center lg:gap-10 lg:py-7">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+        {/* Sized off the reference render (`assets/design/first.png`, a 960px
+            content column against our 1200px one, so ×1.25): an 11px row on a
+            single line, 36px between links and 80px between the two groups,
+            with 16px of padding above and below. */}
+        <div className="flex flex-col gap-6 border-t border-ink-200 py-8 lg:flex-row lg:items-center lg:gap-20 lg:py-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-7">
             <SiteLink href={ROUTES.home} className="rounded-sm" aria-label="xDial — home">
-              <Logo tone="dark" />
+              <Logo tone="dark" size="sm" />
             </SiteLink>
-            <p className="text-meta text-ink-500">{COPYRIGHT}</p>
+            <p className="text-[0.6875rem] leading-tight text-ink-600">{COPYRIGHT}</p>
           </div>
 
+          {/* The reference sets these darker and semibold, and the legal links
+              below them lighter and regular — the two groups are not the same
+              treatment. */}
           <nav aria-label="Footer" className="lg:ml-auto">
-            <ul className="flex flex-wrap items-center gap-x-6 gap-y-2.5">
+            <ul className="flex flex-wrap items-center gap-x-6 gap-y-2.5 lg:gap-x-9">
               {FOOTER_NAV.map((link) => (
                 <li key={link.href}>
                   <SiteLink
                     href={link.href}
-                    className="text-meta text-ink-600 transition-colors hover:text-ink-900"
+                    className="text-[0.6875rem] leading-tight font-semibold text-ink-900 transition-colors hover:text-brand-600"
                   >
                     {link.label}
                   </SiteLink>
@@ -53,12 +60,12 @@ export function SiteFooter({ hipaaBadge = false }: SiteFooterProps) {
             </p>
           ) : (
             <nav aria-label="Legal">
-              <ul className="flex flex-wrap items-center gap-x-6 gap-y-2.5">
+              <ul className="flex flex-wrap items-center gap-x-6 gap-y-2.5 lg:gap-x-9">
                 {LEGAL_NAV.map((link) => (
                   <li key={link.href}>
                     <SiteLink
                       href={link.href}
-                      className="text-meta text-ink-600 transition-colors hover:text-ink-900"
+                      className="text-[0.6875rem] leading-tight text-ink-500 transition-colors hover:text-ink-900"
                     >
                       {link.label}
                     </SiteLink>
