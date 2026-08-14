@@ -17,7 +17,10 @@ export function Hero() {
             favours it — it must hold "Insurance Verification," on one line. */}
         <div className="grid items-center gap-10 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.14fr)_minmax(0,1fr)] lg:gap-10 lg:py-14">
           {/* ------------------------------------------------------ copy -- */}
-          <div className="max-w-xl lg:max-w-none">
+          {/* Held at the top of the row rather than centred in it: the artwork
+              is now the taller column, and centring would push the headline
+              down by half the difference. */}
+          <div className="max-w-xl lg:max-w-none lg:self-start">
             <p className="text-eyebrow text-white/90 uppercase">{HERO.eyebrow}</p>
 
             <h1 className="mt-4 text-[clamp(2.25rem,4.4vw,3.5rem)] leading-[1.06] font-bold tracking-[-0.03em] text-pretty text-white">
@@ -65,8 +68,13 @@ export function Hero() {
               above it for them to rise into. */}
           <div className="relative mx-auto w-full max-w-[38rem] pt-11 lg:mx-0 lg:max-w-none">
             {/* Bleeds past the container gutter on wide screens, as in the
-                reference where the scene runs toward the page edge. */}
-            <div className="relative lg:-mr-10">
+                reference where the scene runs toward the page edge, and past
+                its own column on the left: the reference draws the scene about
+                a fifth larger than the column alone allows, with the mascot's
+                tail reaching back level with the headline. The right edge and
+                the column's top padding are untouched, so the artwork grows
+                left and down only. */}
+            <div className="relative lg:-mr-10 lg:-ml-14 xl:-ml-24">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute -inset-x-8 -inset-y-10 hero-art-halo"
@@ -76,7 +84,7 @@ export function Hero() {
                 width={384}
                 height={256}
                 alt="IVRRex, the xDial AI agent, calmly wearing a headset while an angry desk phone shouts hold-music platitudes back at it."
-                className="relative block h-auto w-full max-w-[41rem] select-none"
+                className="relative block h-auto w-full max-w-[45rem] select-none"
                 fetchPriority="high"
                 decoding="async"
                 draggable={false}
@@ -90,7 +98,7 @@ export function Hero() {
                 lines={HERO_BUBBLES.agent.lines}
                 tone={HERO_BUBBLES.agent.tone}
                 tailX="76%"
-                className="absolute bottom-[90%] left-[4%] z-10 w-[40%] max-w-[11.5rem]"
+                className="absolute bottom-[90%] left-[9%] z-10 w-[40%] max-w-[11.5rem]"
               />
               <HeroBubble
                 lines={HERO_BUBBLES.payer.lines}

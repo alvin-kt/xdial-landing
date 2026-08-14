@@ -25,21 +25,22 @@ export function Integrations() {
             </span>
           ))}
         </h3>
-        <p className="mt-2 text-[0.8125rem] text-ink-600">{INTEGRATIONS.subheading}</p>
+        <p className="mt-2 text-[0.8125rem] text-ink-600 xl:text-sm">{INTEGRATIONS.subheading}</p>
 
         {/* Equal-width tiles sharing whatever the mascot leaves. The switch to
             a single row is keyed to this column's own width rather than the
             viewport's, since the mascot is what decides how much is left. From
             xl they take the reference's own size — ~52px on its column, 25px
-            apart — instead of stretching across whatever the column has. */}
-        <ul className="mt-5 grid grid-cols-2 gap-2 xl:max-w-[21.5rem] xl:gap-6 @[17.5rem]:grid-cols-4">
+            apart — instead of stretching across whatever the column has, with
+            just enough width for the 12px label the reference sets. */}
+        <ul className="mt-5 grid grid-cols-2 gap-2 xl:max-w-[22.5rem] xl:gap-6 @[17.5rem]:grid-cols-4">
           {INTEGRATIONS.targets.map(({ icon: Icon, label }) => (
             <li
               key={label}
               className="flex min-w-0 flex-col items-center gap-1.5 rounded-lg border border-ink-200/80 bg-white px-1.5 py-2.5 text-center shadow-card"
             >
               <Icon aria-hidden="true" className="size-4 text-brand-600" />
-              <span className="text-[0.6875rem] leading-tight font-medium text-ink-700">
+              <span className="text-[0.6875rem] leading-tight font-medium text-ink-700 xl:text-xs">
                 {label}
               </span>
             </li>
@@ -49,7 +50,7 @@ export function Integrations() {
         {/* Sits directly under the tiles, as in the reference — never pushed to
             the foot of the panel, so no gap opens up when the row is taller
             than this column's content. */}
-        <ul className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-[0.6875rem] text-ink-600 xl:mt-7">
+        <ul className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-[0.6875rem] text-ink-600 xl:mt-7 xl:text-[0.8125rem]">
           {INTEGRATIONS.assurances.map((item, index) => (
             <li key={item} className="flex items-center gap-2.5">
               {index > 0 ? (
