@@ -1,4 +1,4 @@
-import { ChartNoAxesCombined, Clock, ShieldCheck } from 'lucide-react'
+import { Clock, ShieldCheck } from 'lucide-react'
 
 import type { FeatureItem } from './types'
 
@@ -12,11 +12,10 @@ export const HERO = {
   secondaryCta: { label: 'Watch a Verification', href: '/#watch-a-verification' },
 } as const
 
-/** The three proof points sitting under the hero calls-to-action. */
+/** The proof points sitting under the hero calls-to-action. */
 export const HERO_HIGHLIGHTS = [
   { icon: Clock, title: 'Save Hours', description: 'Per verification' },
   { icon: ShieldCheck, title: 'Improve Accuracy', description: 'Get reliable data' },
-  { icon: ChartNoAxesCombined, title: 'Reduce Denials', description: 'Verify benefits upfront' },
 ] as const satisfies readonly FeatureItem[]
 
 /**

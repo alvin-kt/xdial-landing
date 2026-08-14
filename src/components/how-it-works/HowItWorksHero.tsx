@@ -12,7 +12,9 @@ export function HowItWorksHero() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 hero-grid" />
 
       <Container className="relative">
-        <div className="grid gap-10 py-12 sm:py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-end lg:gap-10 lg:py-14">
+        {/* The artwork carries its own headroom, so the section only needs a
+            slim gap under the header. */}
+        <div className="grid gap-10 pt-6 pb-12 sm:pt-7 sm:pb-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-end lg:gap-10 lg:pt-7 lg:pb-14">
           {/* ------------------------------------------------------ copy -- */}
           <div className="max-w-xl lg:max-w-none">
             <p className="text-eyebrow text-brand-500 uppercase">{HIW_HERO.eyebrow}</p>
@@ -47,17 +49,22 @@ export function HowItWorksHero() {
 
           {/* ------------------------------- artwork and status pipeline -- */}
           <div className="flex flex-col gap-8 lg:gap-10">
-            <div className="relative mx-auto w-full max-w-[34rem] lg:mx-0 lg:-mr-10 lg:max-w-none xl:-mr-16">
+            {/* Scaled to the reference, where the scene is the dominant element
+                of the hero and runs out past the container gutter. */}
+            {/* The bleed grows with the viewport: it only ever eats the gutter
+                and the margin outside it, so the payer's building never gets
+                clipped by the section's right edge. */}
+            <div className="relative mx-auto w-full max-w-[38rem] lg:mx-0 lg:-mr-10 lg:max-w-none xl:-mr-16 2xl:-mr-24 2xl:w-[110%]">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute -inset-x-6 -inset-y-8 hero-art-halo"
               />
               <img
                 src="/images/ivrrex-call-flow.png"
-                width={543}
-                height={181}
+                width={1577}
+                height={647}
                 alt="IVRRex, the xDial AI agent, on a call that runs through the phone network to an insurance company."
-                className="relative block h-auto w-full select-none"
+                className="relative block h-auto w-full select-none hero-art-fade"
                 fetchPriority="high"
                 decoding="async"
                 draggable={false}

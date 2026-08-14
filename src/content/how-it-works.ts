@@ -10,7 +10,7 @@ import {
   UserRound,
 } from 'lucide-react'
 
-import { DocumentCheckIcon } from '@/components/icons'
+import { DocumentCheckIcon, FormCheckIcon } from '@/components/icons'
 
 import type { IconComponent } from './types'
 
@@ -126,7 +126,7 @@ export const HIW_SUMMARY = {
   heading: 'From Request to Result.',
   steps: [
     {
-      icon: DocumentCheckIcon,
+      icon: FormCheckIcon,
       title: 'Submit',
       description: 'Patient information goes in.',
     },

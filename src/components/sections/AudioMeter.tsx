@@ -15,7 +15,7 @@ interface AudioMeterProps {
  */
 export function AudioMeter({ className }: AudioMeterProps) {
   return (
-    <span aria-hidden="true" className={cn('flex h-4 items-center gap-[2px]', className)}>
+    <span aria-hidden="true" className={cn('flex h-4 items-end gap-[2px]', className)}>
       {BARS.map((height, index) => (
         <span
           key={index}

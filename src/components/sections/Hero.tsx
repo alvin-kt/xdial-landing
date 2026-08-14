@@ -47,7 +47,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <ul className="mt-9 grid gap-5 sm:grid-cols-3 sm:gap-4 lg:mt-10">
+            <ul className="mt-9 grid gap-5 sm:grid-cols-2 sm:gap-4 lg:mt-10">
               {HERO_HIGHLIGHTS.map(({ icon: Icon, title, description }) => (
                 <li key={title} className="flex items-center gap-2.5">
                   <Icon aria-hidden="true" className="size-6 shrink-0 text-brand-500" />
@@ -61,24 +61,9 @@ export function Hero() {
           </div>
 
           {/* --------------------------------------------------- artwork -- */}
-          <div className="relative mx-auto w-full max-w-[38rem] lg:mx-0 lg:max-w-none">
-            {/* Captions sit in their own row so they never overlap the mascots
-                and the artwork below stays at its natural aspect ratio. */}
-            <div className="relative z-10 flex items-end justify-between gap-3 px-[3%] pb-5 sm:pb-7">
-              <HeroBubble
-                lines={HERO_BUBBLES.agent.lines}
-                tone={HERO_BUBBLES.agent.tone}
-                tailX="22%"
-                className="w-[43%] max-w-[12rem]"
-              />
-              <HeroBubble
-                lines={HERO_BUBBLES.payer.lines}
-                tone={HERO_BUBBLES.payer.tone}
-                tailX="14%"
-                className="w-[50%] max-w-[14rem]"
-              />
-            </div>
-
+          {/* The captions overhang the artwork, so the column reserves room
+              above it for them to rise into. */}
+          <div className="relative mx-auto w-full max-w-[38rem] pt-11 lg:mx-0 lg:max-w-none">
             {/* Bleeds past the container gutter on wide screens, as in the
                 reference where the scene runs toward the page edge. */}
             <div className="relative lg:-mr-10">
@@ -88,13 +73,30 @@ export function Hero() {
               />
               <img
                 src="/images/hero-mascots.png"
-                width={566}
-                height={310}
+                width={384}
+                height={256}
                 alt="IVRRex, the xDial AI agent, calmly wearing a headset while an angry desk phone shouts hold-music platitudes back at it."
                 className="relative block h-auto w-full max-w-[41rem] select-none"
                 fetchPriority="high"
                 decoding="async"
                 draggable={false}
+              />
+
+              {/* Each caption is anchored to its speaker: percentages are read
+                  off the artwork, so the tails keep pointing at the right head
+                  as the image scales. `bottom` clears the head, `tailX` lands
+                  the notch on it. */}
+              <HeroBubble
+                lines={HERO_BUBBLES.agent.lines}
+                tone={HERO_BUBBLES.agent.tone}
+                tailX="76%"
+                className="absolute bottom-[90%] left-[4%] z-10 w-[40%] max-w-[11.5rem]"
+              />
+              <HeroBubble
+                lines={HERO_BUBBLES.payer.lines}
+                tone={HERO_BUBBLES.payer.tone}
+                tailX="58%"
+                className="absolute bottom-[81%] left-[57%] z-10 w-[41%] max-w-[13rem]"
               />
             </div>
           </div>
