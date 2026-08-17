@@ -97,3 +97,26 @@ export function HashCircleIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+/**
+ * Two footer social marks. Lucide dropped brand glyphs some releases back, so
+ * these are drawn locally at the same 24×24, `currentColor` convention as the
+ * icons above.
+ */
+export function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M6.94 8.5H3.56V20.5H6.94V8.5Z" />
+      <path d="M5.25 7.03A1.96 1.96 0 1 0 5.25 3.1a1.96 1.96 0 0 0 0 3.93Z" />
+      <path d="M9.75 8.5H13v1.64h.05c.45-.83 1.56-1.7 3.2-1.7 3.42 0 4.05 2.16 4.05 4.98v7.08h-3.38v-6.28c0-1.5-.03-3.43-2.14-3.43-2.15 0-2.48 1.62-2.48 3.32v6.39H9.75V8.5Z" />
+    </svg>
+  )
+}
+
+export function XIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M13.63 10.6 20.2 3h-1.56l-5.7 6.6L8.4 3H3l6.9 9.62L3 20.6h1.56l6.02-6.98 4.8 6.98H20.8l-7.17-10Zm-2.13 2.47-.7-.97-5.55-7.7h2.4l4.47 6.2.7.98 5.82 8.1h-2.4l-4.74-6.6Z" />
+    </svg>
+  )
+}

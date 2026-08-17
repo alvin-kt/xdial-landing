@@ -64,7 +64,7 @@ export function HowItWorksHero() {
                 width={1577}
                 height={647}
                 alt="IVRRex, the xDial AI agent, on a call that runs through the phone network to an insurance company."
-                className="relative block h-auto w-full select-none hero-art-fade"
+                className="relative block h-auto w-full hero-art-fade select-none"
                 fetchPriority="high"
                 decoding="async"
                 draggable={false}

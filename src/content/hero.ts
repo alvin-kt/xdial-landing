@@ -1,5 +1,6 @@
 import { Clock, ShieldCheck } from 'lucide-react'
 
+import { ROUTES } from './navigation'
 import type { FeatureItem } from './types'
 
 export const HERO = {
@@ -8,7 +9,7 @@ export const HERO = {
   headline: { lead: 'Insurance Verification,', accent: 'Automated.' },
   paragraph:
     'xDial calls insurance companies, navigates the phone system, speaks with representatives, verifies patient benefits, and delivers a structured verification report—without your staff spending time on the phone.',
-  primaryCta: { label: 'Book a Demo', href: '/#book-a-demo' },
+  primaryCta: { label: 'Book a Demo', href: ROUTES.bookDemo },
   secondaryCta: { label: 'Watch a Verification', href: '/#watch-a-verification' },
 } as const
 

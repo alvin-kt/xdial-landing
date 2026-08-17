@@ -12,6 +12,7 @@ import {
 
 import { DocumentCheckIcon, FormCheckIcon } from '@/components/icons'
 
+import { ROUTES } from './navigation'
 import type { IconComponent } from './types'
 
 import { AGENT_NAME } from './product'
@@ -25,7 +26,7 @@ export const HIW_HERO = {
   headline: { lead: 'Insurance Verification', accent: 'Without the Phone Work.' },
   paragraph:
     'xDial handles over-the-phone insurance verification from start to finish—so your team can focus on patients instead of payers.',
-  primaryCta: { label: 'Book a Demo', href: '/#book-a-demo' },
+  primaryCta: { label: 'Book a Demo', href: ROUTES.bookDemo },
   secondaryCta: { label: 'Watch 60-Second Demo', href: '/#watch-a-verification' },
 } as const
 
@@ -152,7 +153,7 @@ export const HIW_SUMMARY = {
 export const HIW_CTA = {
   heading: { lead: 'Your Staff Gets the Answer.', accent: 'Without Making the Call.' },
   paragraph: `Let ${AGENT_NAME} handle insurance verification.`,
-  cta: { label: 'Book a Demo', href: '/#book-a-demo' },
+  cta: { label: 'Book a Demo', href: ROUTES.bookDemo },
   assurances: [
     { icon: ShieldCheck, label: 'HIPAA Ready' },
     { icon: Lock, label: 'Secure' },

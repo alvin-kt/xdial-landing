@@ -4,18 +4,43 @@ import { SiteFooter } from '@/components/layout/SiteFooter'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { ROUTES } from '@/content/navigation'
 import { useRouter } from '@/lib/router'
+import { BookDemoPage } from '@/pages/BookDemoPage'
 import { HomePage } from '@/pages/HomePage'
 import { HowItWorksPage } from '@/pages/HowItWorksPage'
+import { SecurityPage } from '@/pages/SecurityPage'
+import { SupportPage } from '@/pages/SupportPage'
 
-/** Page titles are set per route so history entries stay tellable apart. */
+/**
+ * Page titles are set per route so history entries stay tellable apart.
+ * `chrome` controls the shared header/footer: `site` is the standard
+ * layout, `bare` renders the page alone — Book a Demo builds its own
+ * top bar, and Security/Support build their own expanded footer.
+ */
 const PAGES = {
   [ROUTES.home]: {
     component: HomePage,
     title: 'xDial — Insurance Verification, Automated',
+    chrome: 'site',
   },
   [ROUTES.howItWorks]: {
     component: HowItWorksPage,
     title: 'How It Works — xDial',
+    chrome: 'site',
+  },
+  [ROUTES.security]: {
+    component: SecurityPage,
+    title: 'Security — xDial',
+    chrome: 'header-only',
+  },
+  [ROUTES.support]: {
+    component: SupportPage,
+    title: 'Support — xDial',
+    chrome: 'header-only',
+  },
+  [ROUTES.bookDemo]: {
+    component: BookDemoPage,
+    title: 'Book a Demo — xDial',
+    chrome: 'bare',
   },
 } as const
 
@@ -28,6 +53,14 @@ export default function App() {
   useEffect(() => {
     document.title = page.title
   }, [page.title])
+
+  if (page.chrome === 'bare') {
+    return (
+      <main id="main">
+        <Page />
+      </main>
+    )
+  }
 
   return (
     <>
@@ -44,7 +77,7 @@ export default function App() {
         <Page />
       </main>
 
-      <SiteFooter hipaaBadge={path === ROUTES.howItWorks} />
+      {page.chrome === 'site' ? <SiteFooter hipaaBadge={path === ROUTES.howItWorks} /> : null}
     </>
   )
 }
