@@ -1,6 +1,7 @@
 import { Container } from '@/components/layout/Container'
 import { SecurityShield } from '@/components/security/SecurityShield'
 import { SECURITY_HERO } from '@/content/security'
+import { cn } from '@/lib/utils'
 
 export function SecurityHero() {
   return (
@@ -24,13 +25,16 @@ export function SecurityHero() {
             <p className="mt-6 text-lg font-semibold text-white">{SECURITY_HERO.subheading}</p>
             <p className="mt-3 max-w-[32rem] text-base text-frost-300">{SECURITY_HERO.paragraph}</p>
 
-            <ul className="mt-8 grid gap-5 sm:grid-cols-2">
-              {SECURITY_HERO.points.map(({ icon: Icon, title, description }) => (
-                <li key={title} className="flex items-start gap-3">
-                  <Icon aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-brand-500" />
-                  <span className="min-w-0">
-                    <span className="block text-sm font-semibold text-white">{title}</span>
-                    <span className="mt-1 block text-[0.8125rem] text-frost-500">
+            <ul className="mt-8 grid gap-6 sm:grid-cols-2 sm:divide-x sm:divide-white/10">
+              {SECURITY_HERO.points.map(({ icon: Icon, title, description }, index) => (
+                <li
+                  key={title}
+                  className={cn('flex items-start gap-3.5', index > 0 && 'sm:pl-6')}
+                >
+                  <Icon aria-hidden="true" className="size-10 shrink-0 text-brand-500" strokeWidth={1.75} />
+                  <span className="min-w-0 pt-1">
+                    <span className="block text-base font-semibold text-white">{title}</span>
+                    <span className="mt-1.5 block text-sm leading-relaxed text-frost-300">
                       {description}
                     </span>
                   </span>

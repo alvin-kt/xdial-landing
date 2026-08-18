@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Check, Mail, Shield } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/button'
@@ -48,9 +48,13 @@ export function SecurityContactBanner() {
 
             <span
               aria-hidden="true"
-              className="hidden shrink-0 items-center justify-center rounded-full bg-white/70 p-8 shadow-card lg:flex"
+              className="relative hidden shrink-0 items-center justify-center rounded-full lg:flex"
             >
-              <ShieldCheck className="size-16 text-brand-300" strokeWidth={1.25} />
+              <Shield className="size-44 text-brand-200/70" strokeWidth={1} />
+              <Check
+                className="absolute size-16 text-brand-600"
+                strokeWidth={3.5}
+              />
             </span>
           </div>
         </div>

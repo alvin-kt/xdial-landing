@@ -49,23 +49,25 @@ export function SiteFooterExpanded({
   return (
     <footer className="bg-navy-950">
       <Container>
-        <div className="grid gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_2.4fr] lg:gap-12 lg:py-14">
+        <div className="grid gap-8 pt-6 pb-5 lg:grid-cols-[minmax(0,1fr)_2.5fr] lg:gap-9 lg:pt-8 lg:pb-6">
           <div>
             <SiteLink
               href={ROUTES.home}
               className="inline-block rounded-sm"
               aria-label="xDial — home"
             >
-              <Logo />
+              <Logo size="lg" />
             </SiteLink>
-            <p className="mt-4 max-w-[15rem] text-sm text-frost-500">{FOOTER_TAGLINE}</p>
+            <p className="mt-3 max-w-[15rem] text-sm leading-snug text-frost-500">
+              {FOOTER_TAGLINE}
+            </p>
 
             {badges ? (
-              <ul className="mt-5 flex items-center gap-4 border-t border-white/10 pt-5">
+              <ul className="mt-3 flex items-center gap-5 border-t border-white/5 pt-3">
                 {badges.map(({ icon: Icon, label }) => (
-                  <li key={label} className="flex items-center gap-2">
-                    <Icon aria-hidden="true" className="size-5 shrink-0 text-frost-300" />
-                    <span className="text-[0.8125rem] leading-tight font-medium text-white">
+                  <li key={label} className="flex items-center gap-3">
+                    <Icon aria-hidden="true" className="size-9 shrink-0 text-frost-300" strokeWidth={1.5} />
+                    <span className="text-sm leading-tight font-semibold text-white">
                       {label.split('\n').map((line) => (
                         <span key={line} className="block">
                           {line}
@@ -78,10 +80,10 @@ export function SiteFooterExpanded({
             ) : null}
           </div>
 
-          <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 lg:gap-x-8">
+          <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-4 lg:gap-x-6">
             {columns.map((column) => (
               <nav key={column.heading} aria-label={column.heading}>
-                <p className="text-[0.6875rem] font-semibold tracking-[0.08em] text-frost-500 uppercase">
+                <p className="text-sm font-bold tracking-[0.08em] text-white uppercase">
                   {column.heading}
                 </p>
                 <ul className="mt-4 flex flex-col gap-3">
@@ -99,8 +101,8 @@ export function SiteFooterExpanded({
               </nav>
             ))}
 
-            <div className="col-span-2 border-white/10 sm:col-span-1 sm:border-l sm:pl-8">
-              <p className="text-[0.6875rem] font-semibold tracking-[0.08em] text-frost-500 uppercase">
+            <div className="col-span-2 border-white/10 sm:col-span-1 sm:border-l sm:pl-6">
+              <p className="text-sm font-bold tracking-[0.08em] text-white uppercase">
                 Stay Connected
               </p>
               <p className="mt-4 max-w-[13rem] text-sm text-white/85">
@@ -128,7 +130,7 @@ export function SiteFooterExpanded({
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[0.6875rem] text-frost-500">{COPYRIGHT}</p>
           <nav aria-label="Legal">
             <ul className="flex flex-wrap items-center gap-x-3 gap-y-2">

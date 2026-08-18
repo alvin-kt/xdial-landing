@@ -33,13 +33,13 @@ export function Integrations() {
             xl they take the reference's own size — ~52px on its column, 25px
             apart — instead of stretching across whatever the column has, with
             just enough width for the 12px label the reference sets. */}
-        <ul className="mt-5 grid grid-cols-2 gap-2 xl:max-w-[22.5rem] xl:gap-6 @[17.5rem]:grid-cols-4">
+        <ul className="mt-5 grid grid-cols-2 gap-2 xl:max-w-[25rem] xl:gap-6 @[17.5rem]:grid-cols-4">
           {INTEGRATIONS.targets.map(({ icon: Icon, label }) => (
             <li
               key={label}
               className="flex min-w-0 flex-col items-center gap-1.5 rounded-lg border border-ink-200/80 bg-white px-1.5 py-2.5 text-center shadow-card"
             >
-              <Icon aria-hidden="true" className="size-4 text-brand-600" />
+              <Icon aria-hidden="true" className="size-5 text-brand-600" strokeWidth={2} />
               <span className="text-[0.6875rem] leading-tight font-medium text-ink-700 xl:text-xs">
                 {label}
               </span>

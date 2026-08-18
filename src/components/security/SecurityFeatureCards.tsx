@@ -10,15 +10,15 @@ export function SecurityFeatureCards() {
           {SECURITY_CARDS.map(({ icon: Icon, title, description }) => (
             <li
               key={title}
-              className="flex flex-col items-center rounded-2xl border border-ink-200 bg-white px-6 py-8 text-center shadow-card-lg"
+              className="flex flex-col items-center rounded-2xl border border-ink-200 bg-white px-6 py-9 text-center shadow-card-lg"
             >
-              <span className="flex size-14 items-center justify-center rounded-full bg-brand-50">
-                <Icon aria-hidden="true" className="size-6 text-brand-600" />
+              <span className="flex size-24 items-center justify-center rounded-full bg-brand-50">
+                <Icon aria-hidden="true" className="size-10 text-brand-600" strokeWidth={1.75} />
               </span>
-              <h3 className="relative mt-5 pb-3 text-h4 text-ink-900 after:absolute after:inset-x-0 after:bottom-0 after:mx-auto after:h-0.5 after:w-8 after:rounded-full after:bg-brand-500">
+              <h3 className="relative mt-6 pb-3 text-h4 font-bold text-ink-900 after:absolute after:inset-x-0 after:bottom-0 after:mx-auto after:h-0.5 after:w-8 after:rounded-full after:bg-brand-500">
                 {title}
               </h3>
-              <p className="mt-3 text-sm text-ink-600">{description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-600">{description}</p>
             </li>
           ))}
         </ul>

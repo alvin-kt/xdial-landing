@@ -3,8 +3,8 @@ import { cn } from '@/lib/utils'
 interface LogoProps {
   /** `light` for the dark header/CTA surfaces, `dark` for the light footer. */
   tone?: 'light' | 'dark'
-  /** `sm` is the footer lockup, which the reference draws much smaller. */
-  size?: 'sm' | 'md'
+  /** `sm` is the compact footer lockup; `lg` is the expanded footer's larger mark. */
+  size?: 'sm' | 'md' | 'lg'
   className?: string
 }
 
@@ -34,7 +34,10 @@ export function Logo({ tone = 'light', size = 'md', className }: LogoProps) {
         width={847}
         height={781}
         alt="xDial AI"
-        className={cn('w-auto select-none', size === 'sm' ? 'h-6' : 'h-10 lg:h-11')}
+        className={cn(
+          'w-auto select-none',
+          size === 'sm' ? 'h-6' : size === 'lg' ? 'h-14 lg:h-16' : 'h-10 lg:h-11',
+        )}
         draggable={false}
       />
     </span>
