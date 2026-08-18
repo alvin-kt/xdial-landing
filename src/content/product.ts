@@ -73,5 +73,4 @@ export const CLOSING_CTA = {
     accent: `Let ${AGENT_NAME} handle insurance verification.`,
   },
   primaryCta: { label: 'Book a Demo', href: ROUTES.bookDemo },
-  secondaryCta: { label: `See ${AGENT_NAME} in action`, href: '/#watch-a-verification' },
 } as const

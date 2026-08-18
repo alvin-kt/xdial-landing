@@ -27,7 +27,6 @@ export const HIW_HERO = {
   paragraph:
     'xDial handles over-the-phone insurance verification from start to finish—so your team can focus on patients instead of payers.',
   primaryCta: { label: 'Book a Demo', href: ROUTES.bookDemo },
-  secondaryCta: { label: 'Watch 60-Second Demo', href: '/#watch-a-verification' },
 } as const
 
 export type PipelineTone = 'brand' | 'green'

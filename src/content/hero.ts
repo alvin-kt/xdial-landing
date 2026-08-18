@@ -10,7 +10,6 @@ export const HERO = {
   paragraph:
     'xDial calls insurance companies, navigates the phone system, speaks with representatives, verifies patient benefits, and delivers a structured verification report—without your staff spending time on the phone.',
   primaryCta: { label: 'Book a Demo', href: ROUTES.bookDemo },
-  secondaryCta: { label: 'Watch a Verification', href: '/#watch-a-verification' },
 } as const
 
 /** The proof points sitting under the hero calls-to-action. */

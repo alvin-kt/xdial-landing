@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronRight, Play } from 'lucide-react'
+import { ArrowRight, ChevronRight } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/button'
@@ -26,22 +26,11 @@ export function HowItWorksHero() {
 
             <p className="mt-6 max-w-[29rem] text-lead text-frost-300">{HIW_HERO.paragraph}</p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <div className="mt-8">
               <Button asChild variant="brand" size="cta">
                 <SiteLink href={HIW_HERO.primaryCta.href}>
                   {HIW_HERO.primaryCta.label}
                   <ArrowRight aria-hidden="true" />
-                </SiteLink>
-              </Button>
-              <Button asChild variant="brandOutline" size="cta">
-                <SiteLink href={HIW_HERO.secondaryCta.href}>
-                  <span
-                    aria-hidden="true"
-                    className="flex size-6 items-center justify-center rounded-full border border-white/60"
-                  >
-                    <Play className="size-2.5 translate-x-px fill-current" />
-                  </span>
-                  {HIW_HERO.secondaryCta.label}
                 </SiteLink>
               </Button>
             </div>

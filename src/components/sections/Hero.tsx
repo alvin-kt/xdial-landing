@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
 import { HeroBubble } from '@/components/sections/HeroBubble'
@@ -30,22 +30,11 @@ export function Hero() {
 
             <p className="mt-6 max-w-[30.5rem] text-lead text-frost-300">{HERO.paragraph}</p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <div className="mt-8">
               <Button asChild variant="brand" size="cta">
                 <SiteLink href={HERO.primaryCta.href}>
                   {HERO.primaryCta.label}
                   <ArrowRight aria-hidden="true" />
-                </SiteLink>
-              </Button>
-              <Button asChild variant="brandOutline" size="cta">
-                <SiteLink href={HERO.secondaryCta.href}>
-                  <span
-                    aria-hidden="true"
-                    className="flex size-6 items-center justify-center rounded-full border border-white/60"
-                  >
-                    <Play className="size-2.5 translate-x-px fill-current" />
-                  </span>
-                  {HERO.secondaryCta.label}
                 </SiteLink>
               </Button>
             </div>
