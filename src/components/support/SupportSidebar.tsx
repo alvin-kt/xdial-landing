@@ -5,15 +5,15 @@ import { SiteLink } from '@/lib/router'
 
 export function SupportSidebar() {
   return (
-    <div className="flex flex-col gap-5">
-      <div className="rounded-2xl border border-ink-200 bg-white p-6 shadow-card">
+    <div className="flex flex-col gap-6">
+      <div className="rounded-2xl border border-ink-200 bg-white p-7 shadow-card">
         <h2 className="text-h3">{SUPPORT_SIDEBAR.heading}</h2>
 
-        <ul className="mt-5 flex flex-col gap-5">
+        <ul className="mt-6 flex flex-col gap-6">
           {SUPPORT_SIDEBAR.items.map(({ icon: Icon, title, description, link, cta }) => (
-            <li key={title} className="flex items-start gap-3.5">
-              <span className="mt-0.5 flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-50">
-                <Icon aria-hidden="true" className="size-5 text-brand-600" />
+            <li key={title} className="flex items-start gap-4">
+              <span className="mt-0.5 flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-50">
+                <Icon aria-hidden="true" className="size-5.5 text-brand-600" />
               </span>
               <div className="min-w-0">
                 <h3 className="text-base font-semibold text-ink-900">{title}</h3>
@@ -41,10 +41,10 @@ export function SupportSidebar() {
         </ul>
       </div>
 
-      <div className="rounded-2xl border border-ink-200 bg-white p-6 shadow-card">
-        <div className="flex items-start gap-3.5">
-          <span className="mt-0.5 flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-50">
-            <ShieldAlert aria-hidden="true" className="size-5 text-brand-600" />
+      <div className="rounded-2xl border border-ink-200 bg-white p-7 shadow-card">
+        <div className="flex items-start gap-4">
+          <span className="mt-0.5 flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-50">
+            <ShieldAlert aria-hidden="true" className="size-5.5 text-brand-600" />
           </span>
           <div className="min-w-0">
             <h3 className="text-base font-semibold text-ink-900">

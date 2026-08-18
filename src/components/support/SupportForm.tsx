@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronDown, Lock, ShieldAlert, UploadCloud, Wrench } from 'lucide-react'
-import { useState, type FormEvent } from 'react'
+import { useState, type DragEvent, type FormEvent } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { SUPPORT_FORM, type SupportCategoryId } from '@/content/support'
@@ -35,12 +35,30 @@ function Required() {
 
 export function SupportForm({ category }: SupportFormProps) {
   const [submitted, setSubmitted] = useState(false)
+  const [files, setFiles] = useState<File[]>([])
+  const [isDragging, setIsDragging] = useState(false)
   const copy = CATEGORY_COPY[category]
   const f = SUPPORT_FORM.fields
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setSubmitted(true)
+  }
+
+  function handleDragOver(event: DragEvent<HTMLLabelElement>) {
+    event.preventDefault()
+    setIsDragging(true)
+  }
+
+  function handleDragLeave(event: DragEvent<HTMLLabelElement>) {
+    event.preventDefault()
+    setIsDragging(false)
+  }
+
+  function handleDrop(event: DragEvent<HTMLLabelElement>) {
+    event.preventDefault()
+    setIsDragging(false)
+    setFiles((prev) => [...prev, ...Array.from(event.dataTransfer.files)])
   }
 
   if (submitted) {
@@ -59,10 +77,10 @@ export function SupportForm({ category }: SupportFormProps) {
   }
 
   return (
-    <div className="rounded-2xl border border-ink-200 bg-white p-6 shadow-card sm:p-7">
-      <div className="flex items-start gap-3.5">
-        <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-brand-50">
-          <Wrench aria-hidden="true" className="size-6 text-brand-600" strokeWidth={1.75} />
+    <div className="rounded-2xl border border-ink-200 bg-white p-7 pt-9 shadow-card sm:p-8 sm:pt-10">
+      <div className="flex items-start gap-4">
+        <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-brand-50">
+          <Wrench aria-hidden="true" className="size-7 text-brand-600" strokeWidth={1.75} />
         </span>
         <div>
           <h2 className="text-h3">{copy.title}</h2>
@@ -182,15 +200,37 @@ export function SupportForm({ category }: SupportFormProps) {
 
         <div>
           <span className="text-sm font-medium text-ink-900">{SUPPORT_FORM.attachments.label}</span>
-          <label className="mt-1.5 flex cursor-pointer flex-col items-center gap-1.5 rounded-lg border border-dashed border-ink-200 bg-mist px-6 py-8 text-center transition-colors hover:border-brand-300">
+          <label
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            className={cn(
+              'mt-1.5 flex cursor-pointer flex-col items-center gap-1.5 rounded-lg border border-dashed bg-mist px-6 py-8 text-center transition-colors hover:border-brand-300',
+              isDragging ? 'border-brand-500 bg-brand-50/60' : 'border-ink-200',
+            )}
+          >
             <UploadCloud aria-hidden="true" className="size-5 text-ink-400" />
             <p className="text-sm text-ink-700">
               <span className="font-medium text-brand-600">{SUPPORT_FORM.attachments.action}</span>{' '}
               {SUPPORT_FORM.attachments.trail}
             </p>
             <p className="text-[0.8125rem] text-ink-500">{SUPPORT_FORM.attachments.hint}</p>
-            <input type="file" multiple className="sr-only" />
+            <input
+              type="file"
+              multiple
+              className="sr-only"
+              onChange={(event) => setFiles((prev) => [...prev, ...Array.from(event.target.files ?? [])])}
+            />
           </label>
+          {files.length > 0 ? (
+            <ul className="mt-2.5 flex flex-col gap-1 text-[0.8125rem] text-ink-600">
+              {files.map((file, index) => (
+                <li key={`${file.name}-${index}`} className="truncate">
+                  {file.name}
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </div>
 
         <Button type="submit" variant="brand" size="cta" className="w-full">

@@ -14,19 +14,19 @@ export function SupportHero() {
           <div className="max-w-xl lg:max-w-none">
             <p className="text-eyebrow text-brand-500 uppercase">{SUPPORT_HERO.eyebrow}</p>
 
-            <h1 className="mt-4 text-[clamp(2.25rem,4.2vw,3.25rem)] leading-[1.1] font-bold tracking-[-0.03em] text-pretty text-white">
+            <h1 className="mt-4 text-[clamp(2.25rem,4.8vw,3.75rem)] leading-[1.1] font-bold tracking-[-0.03em] text-pretty text-white">
               {SUPPORT_HERO.headline.lead}
               <span className="text-brand-500">{SUPPORT_HERO.headline.accent}</span>
             </h1>
 
-            <p className="mt-5 max-w-[28rem] text-lead text-frost-300">{SUPPORT_HERO.paragraph}</p>
+            <p className="mt-5 max-w-[19rem] text-lead text-frost-300">{SUPPORT_HERO.paragraph}</p>
 
-            <div className="mt-7 flex items-center gap-3">
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand-600/15 ring-1 ring-brand-500/25">
-                <Mail aria-hidden="true" className="size-4.5 text-brand-400" />
+            <div className="mt-8 flex items-center gap-3.5">
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-600/15 ring-1 ring-brand-500/25">
+                <Mail aria-hidden="true" className="size-5.5 text-brand-400" />
               </span>
-              <p className="text-sm">
-                <span className="block text-frost-500">{SUPPORT_HERO.email.lead}</span>
+              <p className="text-base">
+                <span className="block text-frost-300">{SUPPORT_HERO.email.lead}</span>
                 <SiteLink
                   href={`mailto:${SUPPORT_HERO.email.address}`}
                   className="font-semibold text-brand-400 hover:text-brand-300"

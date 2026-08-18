@@ -2,7 +2,6 @@ import { ArrowRight } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
 import { SUPPORT_CATEGORIES, type SupportCategoryId } from '@/content/support'
-import { cn } from '@/lib/utils'
 
 interface SupportCategoryCardsProps {
   active: SupportCategoryId
@@ -23,20 +22,15 @@ export function SupportCategoryCards({ active, onSelect }: SupportCategoryCardsP
                   type="button"
                   onClick={() => onSelect(id)}
                   aria-pressed={isActive}
-                  className={cn(
-                    'flex w-full flex-col items-start rounded-2xl border bg-white px-7 py-8 text-left shadow-card-lg transition-colors',
-                    isActive
-                      ? 'border-brand-500 ring-1 ring-brand-500'
-                      : 'border-ink-200 hover:border-brand-300',
-                  )}
+                  className="flex w-full flex-col items-center rounded-2xl border border-ink-200 bg-white px-7 py-10 text-center shadow-card-lg transition-colors hover:border-brand-500 hover:ring-1 hover:ring-brand-500"
                 >
-                  <span className="flex size-16 items-center justify-center rounded-full bg-brand-50">
-                    <Icon aria-hidden="true" className="size-7 text-brand-600" strokeWidth={1.75} />
+                  <span className="flex size-20 items-center justify-center rounded-full bg-brand-50">
+                    <Icon aria-hidden="true" className="size-9 text-brand-600" strokeWidth={1.75} />
                   </span>
-                  <h3 className="mt-5 text-h3 text-ink-900">{title}</h3>
-                  <p className="mt-2 text-base leading-relaxed text-ink-600">{description}</p>
-                  <span className="mt-4 flex size-8 items-center justify-center rounded-full text-brand-600">
-                    <ArrowRight aria-hidden="true" className="size-5" />
+                  <h3 className="mt-6 text-h3 text-ink-900">{title}</h3>
+                  <p className="mt-2.5 text-base leading-relaxed text-ink-600">{description}</p>
+                  <span className="mt-5 flex size-9 items-center justify-center rounded-full text-brand-600">
+                    <ArrowRight aria-hidden="true" className="size-6" />
                   </span>
                 </button>
               </li>

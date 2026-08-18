@@ -22,7 +22,7 @@ export function SupportPage() {
         <SupportCategoryCards active={category} onSelect={setCategory} />
 
         <Container>
-          <div className="-mt-6 grid gap-6 pb-16 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-8 lg:pb-20">
+          <div className="-mt-6 grid gap-6 pb-16 lg:grid-cols-[minmax(0,1fr)_23.5rem] lg:gap-6 lg:pb-20">
             <SupportForm category={category} />
             <SupportSidebar />
           </div>
