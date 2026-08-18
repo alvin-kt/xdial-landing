@@ -1,6 +1,7 @@
 import { ChevronDown, UserRound } from 'lucide-react'
 
 import { DocumentCheckIcon } from '@/components/icons'
+import { IconCircle } from '@/components/ui/icon-circle'
 
 import { HIW_REQUEST_FORM } from '@/content/how-it-works'
 
@@ -36,9 +37,9 @@ export function RequestFormCard() {
 
         {/* Confirmation rail — the same beat as "Submitted" in the hero strip. */}
         <div className="flex flex-col items-center justify-center gap-4 border-t border-ink-200 bg-mist px-6 py-7 text-center lg:border-t-0 lg:border-l">
-          <span className="flex size-16 items-center justify-center rounded-full bg-white shadow-step">
-            <DocumentCheckIcon aria-hidden="true" className="size-8 text-brand-600" />
-          </span>
+          <IconCircle size="lg" className="bg-white text-brand-600 shadow-step">
+            <DocumentCheckIcon aria-hidden="true" />
+          </IconCircle>
           <p className="text-sm text-ink-600">
             {HIW_REQUEST_FORM.confirmation.lead}
             <span className="font-medium text-brand-600">

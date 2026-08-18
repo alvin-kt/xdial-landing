@@ -9,7 +9,7 @@ export function SecurityContactBanner() {
   return (
     <section className="bg-mist pb-12 lg:pb-16">
       <Container>
-        <div className="relative overflow-hidden rounded-2xl bg-brand-50/60 px-6 py-9 sm:px-8 lg:px-10">
+        <div className="relative overflow-hidden rounded-2xl bg-brand-50/60 px-6 py-8 sm:px-8 sm:py-9 lg:px-10">
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <img
@@ -51,10 +51,7 @@ export function SecurityContactBanner() {
               className="relative hidden shrink-0 items-center justify-center rounded-full lg:flex"
             >
               <Shield className="size-44 text-brand-200/70" strokeWidth={1} />
-              <Check
-                className="absolute size-16 text-brand-600"
-                strokeWidth={3.5}
-              />
+              <Check className="absolute size-16 text-brand-600" strokeWidth={3.5} />
             </span>
           </div>
         </div>

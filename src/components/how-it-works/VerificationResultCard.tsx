@@ -1,6 +1,7 @@
 import { CircleCheck } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { HIW_RESULT } from '@/content/how-it-works'
 import { SiteLink } from '@/lib/router'
 import { cn } from '@/lib/utils'
@@ -48,9 +49,9 @@ export function VerificationResultCard() {
         <dl className="flex flex-col justify-center gap-4 lg:border-l lg:border-ink-200 lg:pl-5">
           {HIW_RESULT.callDetails.map(({ icon: Icon, label, value }) => (
             <div key={label} className="flex items-start gap-3">
-              <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-50">
-                <Icon aria-hidden="true" className="size-4 text-brand-600" />
-              </span>
+              <IconCircle size="sm" className="mt-0.5 bg-brand-50 text-brand-600">
+                <Icon aria-hidden="true" />
+              </IconCircle>
               <div className="min-w-0">
                 <dt className="text-meta text-ink-500">{label}</dt>
                 <dd className="text-sm font-medium text-ink-900">{value}</dd>

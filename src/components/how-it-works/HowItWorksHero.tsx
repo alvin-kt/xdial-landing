@@ -2,9 +2,9 @@ import { ArrowRight, ChevronRight, Play } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/button'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { HIW_HERO, HIW_PIPELINE } from '@/content/how-it-works'
 import { SiteLink } from '@/lib/router'
-import { cn } from '@/lib/utils'
 
 export function HowItWorksHero() {
   return (
@@ -14,12 +14,12 @@ export function HowItWorksHero() {
       <Container className="relative">
         {/* The artwork carries its own headroom, so the section only needs a
             slim gap under the header. */}
-        <div className="grid gap-10 pt-6 pb-12 sm:pt-7 sm:pb-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-end lg:gap-10 lg:pt-7 lg:pb-14">
+        <div className="grid gap-10 pt-6 pb-12 sm:pt-7 sm:pb-14 lg:grid-cols-[minmax(0,1.14fr)_minmax(0,1fr)] lg:items-end lg:gap-10 lg:pt-7 lg:pb-14">
           {/* ------------------------------------------------------ copy -- */}
           <div className="max-w-xl lg:max-w-none">
             <p className="text-eyebrow text-brand-500 uppercase">{HIW_HERO.eyebrow}</p>
 
-            <h1 className="mt-4 text-[clamp(2rem,3.4vw,2.75rem)] leading-[1.08] font-bold tracking-[-0.03em] text-pretty text-white">
+            <h1 className="mt-4 hero-h1 text-pretty text-white">
               <span className="block">{HIW_HERO.headline.lead}</span>
               <span className="block text-brand-500">{HIW_HERO.headline.accent}</span>
             </h1>
@@ -76,19 +76,18 @@ export function HowItWorksHero() {
             <ol className="flex flex-wrap items-center justify-center gap-x-2 gap-y-4 sm:gap-x-3 lg:flex-nowrap lg:justify-between">
               {HIW_PIPELINE.map(({ icon: Icon, title, description, tone }, index) => (
                 <li key={title} className="flex min-w-0 items-center gap-2.5 sm:gap-3">
-                  <span
-                    className={cn(
-                      'flex size-11 shrink-0 items-center justify-center rounded-full',
-                      tone === 'brand' ? 'bg-brand-600 text-white' : 'bg-[#12a150] text-white',
-                    )}
+                  <IconCircle
+                    size="md"
+                    className={
+                      tone === 'brand' ? 'bg-brand-600 text-white' : 'bg-[#12a150] text-white'
+                    }
                   >
                     <Icon
                       aria-hidden="true"
-                      className="size-5"
                       /* The closing check is drawn heavier, as in the reference. */
                       strokeWidth={title === 'Complete' ? 3 : undefined}
                     />
-                  </span>
+                  </IconCircle>
                   <span className="min-w-0">
                     <span className="block text-base font-semibold whitespace-nowrap text-white">
                       {title}

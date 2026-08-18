@@ -1,12 +1,13 @@
 import { Mail } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { SUPPORT_HERO } from '@/content/support'
 import { SiteLink } from '@/lib/router'
 
 export function SupportHero() {
   return (
-    <section className="relative overflow-hidden pb-20 hero-scene sm:pb-24 lg:pb-28">
+    <section className="relative overflow-hidden hero-scene">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 hero-grid" />
 
       <Container className="relative">
@@ -14,7 +15,7 @@ export function SupportHero() {
           <div className="max-w-xl lg:max-w-none">
             <p className="text-eyebrow text-brand-500 uppercase">{SUPPORT_HERO.eyebrow}</p>
 
-            <h1 className="mt-4 text-[clamp(2.25rem,4.8vw,3.75rem)] leading-[1.1] font-bold tracking-[-0.03em] text-pretty text-white">
+            <h1 className="mt-4 hero-h1 text-pretty text-white">
               {SUPPORT_HERO.headline.lead}
               <span className="text-brand-500">{SUPPORT_HERO.headline.accent}</span>
             </h1>
@@ -22,9 +23,12 @@ export function SupportHero() {
             <p className="mt-5 max-w-[19rem] text-lead text-frost-300">{SUPPORT_HERO.paragraph}</p>
 
             <div className="mt-8 flex items-center gap-3.5">
-              <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-600/15 ring-1 ring-brand-500/25">
-                <Mail aria-hidden="true" className="size-5.5 text-brand-400" />
-              </span>
+              <IconCircle
+                size="md"
+                className="bg-brand-600/15 text-brand-400 ring-1 ring-brand-500/25"
+              >
+                <Mail aria-hidden="true" />
+              </IconCircle>
               <p className="text-base">
                 <span className="block text-frost-300">{SUPPORT_HERO.email.lead}</span>
                 <SiteLink

@@ -9,7 +9,7 @@ export function HowItWorksCta() {
   return (
     <section id="pricing" className="bg-mist pb-12 lg:pb-16">
       <Container>
-        <div className="overflow-hidden rounded-2xl bg-navy-950 px-6 py-8 sm:px-8 lg:px-10">
+        <div className="overflow-hidden rounded-2xl bg-navy-950 px-6 py-8 sm:px-8 sm:py-9 lg:px-10">
           <div className="flex flex-col items-center gap-7 lg:flex-row lg:items-center lg:gap-10">
             <img
               src="/images/ivrrex-thumbsup.png"

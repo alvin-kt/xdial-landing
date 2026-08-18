@@ -18,9 +18,7 @@ export function VerificationSteps() {
     <section id="how-it-works" className="bg-mist">
       <Container>
         <div className="py-12 lg:py-16">
-          <h2 className="text-center text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.15] font-bold tracking-[-0.025em] text-ink-900">
-            {HIW_HEADING}
-          </h2>
+          <h2 className="text-center text-h2">{HIW_HEADING}</h2>
 
           <ol className="mt-10 flex flex-col gap-8 lg:mt-12 lg:gap-10">
             {STAGES.map(({ step, Card }, index) => (

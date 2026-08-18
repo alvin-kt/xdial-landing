@@ -1,6 +1,7 @@
 import { Check, Phone } from 'lucide-react'
 
 import { AudioMeter } from '@/components/sections/AudioMeter'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { BOOK_DEMO_CALL, BOOK_DEMO_HERO, BOOK_DEMO_TRUST } from '@/content/book-demo'
 import { cn } from '@/lib/utils'
 
@@ -9,9 +10,9 @@ function CallStatusCard() {
   return (
     <div className="w-full max-w-[22rem] rounded-2xl border border-white/10 bg-navy-900/80 p-5 shadow-card-lg backdrop-blur-sm sm:p-6">
       <div className="flex items-center gap-3">
-        <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-600">
-          <Phone aria-hidden="true" className="size-5 text-white" />
-        </span>
+        <IconCircle size="md" className="bg-brand-600 text-white">
+          <Phone aria-hidden="true" />
+        </IconCircle>
         <AudioMeter className="opacity-90" />
       </div>
 
@@ -42,7 +43,7 @@ function CallStatusCard() {
 export function BookDemoInfo() {
   return (
     <div className="flex flex-col">
-      <h1 className="text-[clamp(2.25rem,4.2vw,3.25rem)] leading-[1.08] font-bold tracking-[-0.03em] text-pretty text-white">
+      <h1 className="hero-h1 text-pretty text-white">
         {BOOK_DEMO_HERO.headline.lead}
         <span className="text-brand-500">{BOOK_DEMO_HERO.headline.accent}</span>
       </h1>
@@ -52,9 +53,9 @@ export function BookDemoInfo() {
       <ul className="mt-8 flex flex-col gap-5">
         {BOOK_DEMO_HERO.checklist.map(({ title, description }) => (
           <li key={title} className="flex items-start gap-3.5">
-            <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-600">
-              <Check aria-hidden="true" className="size-5 text-white" strokeWidth={3} />
-            </span>
+            <IconCircle size="md" className="mt-0.5 bg-brand-600 text-white">
+              <Check aria-hidden="true" strokeWidth={3} />
+            </IconCircle>
             <span className="min-w-0">
               <span className="block text-base font-semibold text-white">{title}</span>
               <span className="mt-0.5 block text-sm text-frost-300">{description}</span>
@@ -80,7 +81,7 @@ export function BookDemoInfo() {
       <ul className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/10 pt-7">
         {BOOK_DEMO_TRUST.map(({ icon: Icon, title, description }) => (
           <li key={title} className="flex items-center gap-2">
-            <Icon aria-hidden="true" className="size-4.5 text-brand-500" />
+            <Icon aria-hidden="true" className="size-4 text-brand-500" />
             <span className="text-sm text-white/85">
               {title} {description}
             </span>

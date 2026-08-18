@@ -75,6 +75,21 @@
 }
 
 /* -----------------------------------------------------------------------------
+   Hero headline
+   Every page's hero (or hero-equivalent) H1 shares this one fluid scale, so
+   the type doesn't drift page to page: it ceilings at the `--text-h1` token
+   (the reference's measured size) and scales down on narrower viewports at
+   the same rate Home's headline — the one with the least room to spare — was
+   tuned to.
+   -------------------------------------------------------------------------- */
+@utility hero-h1 {
+  font-size: clamp(2.25rem, 4.4vw, var(--text-h1));
+  line-height: var(--text-h1--line-height);
+  letter-spacing: var(--text-h1--letter-spacing);
+  font-weight: var(--text-h1--font-weight);
+}
+
+/* -----------------------------------------------------------------------------
    Neon speech bubbles
    Rebuilt as real text (the reference has them as flattened raster) so they
    stay crisp, selectable and translatable at any viewport size.

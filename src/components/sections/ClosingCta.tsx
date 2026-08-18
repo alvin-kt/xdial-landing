@@ -2,6 +2,7 @@ import { ArrowRight, Calendar, Play } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/button'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { CLOSING_CTA } from '@/content/product'
 import { SiteLink } from '@/lib/router'
 
@@ -11,12 +12,13 @@ export function ClosingCta() {
       <Container>
         <div className="overflow-hidden rounded-2xl bg-navy-850 px-6 py-8 sm:px-8 sm:py-9 lg:px-10">
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:gap-10">
-            <span
+            <IconCircle
+              size="lg"
               aria-hidden="true"
-              className="hidden size-16 shrink-0 items-center justify-center rounded-2xl bg-brand-600/15 ring-1 ring-brand-500/25 lg:flex"
+              className="hidden bg-brand-600/15 text-brand-500 ring-1 ring-brand-500/25 lg:flex"
             >
-              <Calendar className="size-8 text-brand-500" />
-            </span>
+              <Calendar />
+            </IconCircle>
 
             <h2 className="flex-1 text-h2 text-white">
               <span className="block">{CLOSING_CTA.heading.lead}</span>

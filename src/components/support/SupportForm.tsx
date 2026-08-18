@@ -2,6 +2,7 @@ import { ArrowRight, ChevronDown, Lock, ShieldAlert, UploadCloud, Wrench } from 
 import { useState, type DragEvent, type FormEvent } from 'react'
 
 import { Button } from '@/components/ui/button'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { SUPPORT_FORM, type SupportCategoryId } from '@/content/support'
 import { cn } from '@/lib/utils'
 
@@ -79,9 +80,9 @@ export function SupportForm({ category }: SupportFormProps) {
   return (
     <div className="rounded-2xl border border-ink-200 bg-white p-7 pt-9 shadow-card sm:p-8 sm:pt-10">
       <div className="flex items-start gap-4">
-        <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-brand-50">
-          <Wrench aria-hidden="true" className="size-7 text-brand-600" strokeWidth={1.75} />
-        </span>
+        <IconCircle size="lg" className="bg-brand-50 text-brand-600">
+          <Wrench aria-hidden="true" strokeWidth={1.75} />
+        </IconCircle>
         <div>
           <h2 className="text-h3">{copy.title}</h2>
           <p className="mt-1.5 max-w-md text-sm text-ink-600">{copy.paragraph}</p>
@@ -219,7 +220,9 @@ export function SupportForm({ category }: SupportFormProps) {
               type="file"
               multiple
               className="sr-only"
-              onChange={(event) => setFiles((prev) => [...prev, ...Array.from(event.target.files ?? [])])}
+              onChange={(event) =>
+                setFiles((prev) => [...prev, ...Array.from(event.target.files ?? [])])
+              }
             />
           </label>
           {files.length > 0 ? (

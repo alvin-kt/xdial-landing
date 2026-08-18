@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 
 import { Container } from '@/components/layout/Container'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { HIW_SUMMARY } from '@/content/how-it-works'
 
 /**
@@ -11,7 +12,7 @@ export function RequestToResult() {
   return (
     <section className="bg-mist">
       <Container>
-        <div className="rounded-2xl border border-ink-200 bg-white/70 px-5 py-9 sm:px-8">
+        <div className="rounded-2xl border border-ink-200 bg-white/70 px-6 py-8 sm:px-8 lg:px-10">
           <h2 className="text-center text-h2">{HIW_SUMMARY.heading}</h2>
 
           <ol className="mt-8 grid gap-x-4 gap-y-8 sm:grid-cols-2 lg:flex lg:items-start lg:justify-between">
@@ -21,7 +22,7 @@ export function RequestToResult() {
                 className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:gap-4"
               >
                 <div className="flex max-w-[13rem] flex-col items-center text-center lg:w-40">
-                  <span className="flex size-16 items-center justify-center overflow-hidden rounded-full bg-sky-tint">
+                  <IconCircle size="lg" className="overflow-hidden bg-sky-tint text-brand-600">
                     {'image' in step ? (
                       <img
                         src={step.image}
@@ -35,9 +36,9 @@ export function RequestToResult() {
                         draggable={false}
                       />
                     ) : (
-                      <step.icon aria-hidden="true" className="size-9 text-brand-600" />
+                      <step.icon aria-hidden="true" />
                     )}
-                  </span>
+                  </IconCircle>
 
                   <span className="mt-3.5 text-base font-semibold text-ink-900">{step.title}</span>
                   <span className="mt-1 text-sm text-ink-600">{step.description}</span>

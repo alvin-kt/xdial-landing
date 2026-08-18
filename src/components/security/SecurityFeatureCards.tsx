@@ -1,4 +1,5 @@
 import { Container } from '@/components/layout/Container'
+import { IconCircle } from '@/components/ui/icon-circle'
 import { SECURITY_CARDS } from '@/content/security'
 
 /** The four HIPAA/BAA/data/access cards that overlap the hero, as in the reference. */
@@ -12,9 +13,9 @@ export function SecurityFeatureCards() {
               key={title}
               className="flex flex-col items-center rounded-2xl border border-ink-200 bg-white px-6 py-9 text-center shadow-card-lg"
             >
-              <span className="flex size-24 items-center justify-center rounded-full bg-brand-50">
-                <Icon aria-hidden="true" className="size-10 text-brand-600" strokeWidth={1.75} />
-              </span>
+              <IconCircle size="xl" className="bg-brand-50 text-brand-600">
+                <Icon aria-hidden="true" strokeWidth={1.75} />
+              </IconCircle>
               <h3 className="relative mt-6 pb-3 text-h4 font-bold text-ink-900 after:absolute after:inset-x-0 after:bottom-0 after:mx-auto after:h-0.5 after:w-8 after:rounded-full after:bg-brand-500">
                 {title}
               </h3>

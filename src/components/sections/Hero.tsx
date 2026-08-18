@@ -23,7 +23,7 @@ export function Hero() {
           <div className="max-w-xl lg:max-w-none lg:self-start">
             <p className="text-eyebrow text-white/90 uppercase">{HERO.eyebrow}</p>
 
-            <h1 className="mt-4 text-[clamp(2.25rem,4.4vw,3.5rem)] leading-[1.06] font-bold tracking-[-0.03em] text-pretty text-white">
+            <h1 className="mt-4 hero-h1 text-pretty text-white">
               <span className="block">{HERO.headline.lead}</span>
               <span className="block text-brand-500">{HERO.headline.accent}</span>
             </h1>
