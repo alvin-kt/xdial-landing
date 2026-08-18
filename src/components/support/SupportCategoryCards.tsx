@@ -24,19 +24,19 @@ export function SupportCategoryCards({ active, onSelect }: SupportCategoryCardsP
                   onClick={() => onSelect(id)}
                   aria-pressed={isActive}
                   className={cn(
-                    'flex w-full flex-col items-start rounded-2xl border bg-white px-6 py-7 text-left shadow-card-lg transition-colors',
+                    'flex w-full flex-col items-start rounded-2xl border bg-white px-7 py-8 text-left shadow-card-lg transition-colors',
                     isActive
                       ? 'border-brand-500 ring-1 ring-brand-500'
                       : 'border-ink-200 hover:border-brand-300',
                   )}
                 >
-                  <span className="flex size-12 items-center justify-center rounded-full bg-brand-50">
-                    <Icon aria-hidden="true" className="size-5 text-brand-600" />
+                  <span className="flex size-16 items-center justify-center rounded-full bg-brand-50">
+                    <Icon aria-hidden="true" className="size-7 text-brand-600" strokeWidth={1.75} />
                   </span>
-                  <h3 className="mt-4 text-h4 text-ink-900">{title}</h3>
-                  <p className="mt-2 text-sm text-ink-600">{description}</p>
+                  <h3 className="mt-5 text-h3 text-ink-900">{title}</h3>
+                  <p className="mt-2 text-base leading-relaxed text-ink-600">{description}</p>
                   <span className="mt-4 flex size-8 items-center justify-center rounded-full text-brand-600">
-                    <ArrowRight aria-hidden="true" className="size-4" />
+                    <ArrowRight aria-hidden="true" className="size-5" />
                   </span>
                 </button>
               </li>

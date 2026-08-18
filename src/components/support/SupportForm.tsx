@@ -61,8 +61,8 @@ export function SupportForm({ category }: SupportFormProps) {
   return (
     <div className="rounded-2xl border border-ink-200 bg-white p-6 shadow-card sm:p-7">
       <div className="flex items-start gap-3.5">
-        <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-50">
-          <Wrench aria-hidden="true" className="size-5 text-brand-600" />
+        <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-brand-50">
+          <Wrench aria-hidden="true" className="size-6 text-brand-600" strokeWidth={1.75} />
         </span>
         <div>
           <h2 className="text-h3">{copy.title}</h2>

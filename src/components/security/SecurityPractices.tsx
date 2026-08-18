@@ -7,9 +7,9 @@ export function SecurityPractices() {
       <Container>
         <div className="rounded-2xl border border-ink-200 bg-white px-6 py-8 sm:px-8 lg:px-10">
           <div className="flex items-center gap-5">
-            <span aria-hidden="true" className="h-px flex-1 bg-ink-200" />
-            <h2 className="shrink-0 text-h2">{SECURITY_PRACTICES_HEADING}</h2>
-            <span aria-hidden="true" className="h-px flex-1 bg-ink-200" />
+            <span aria-hidden="true" className="hidden h-px flex-1 bg-ink-200 sm:block" />
+            <h2 className="min-w-0 shrink text-h2 text-center">{SECURITY_PRACTICES_HEADING}</h2>
+            <span aria-hidden="true" className="hidden h-px flex-1 bg-ink-200 sm:block" />
           </div>
 
           <ul className="mt-8 grid gap-x-2 gap-y-10 sm:grid-cols-3 sm:divide-x sm:divide-ink-200 lg:grid-cols-6">

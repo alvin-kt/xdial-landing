@@ -40,8 +40,8 @@ export function SupportHero() {
           <div className="relative mx-auto w-full max-w-[24rem] lg:mx-0 lg:ml-auto">
             {/* Speech bubble, anchored above the mascot's head. */}
             <div className="relative z-10 mx-auto mb-[-1.1rem] w-[85%] rounded-2xl border border-white/12 bg-navy-900/90 px-5 py-4 shadow-card-lg backdrop-blur-sm sm:ml-16">
-              <p className="text-base font-semibold text-white">{SUPPORT_HERO.bubble[0]}</p>
-              <p className="mt-1 text-sm text-frost-500">{SUPPORT_HERO.bubble[1]}</p>
+              <p className="text-lg font-semibold text-white">{SUPPORT_HERO.bubble[0]}</p>
+              <p className="mt-1 text-sm text-frost-300">{SUPPORT_HERO.bubble[1]}</p>
               <span
                 aria-hidden="true"
                 className="absolute -bottom-2 left-10 size-4 rotate-45 border-r border-b border-white/12 bg-navy-900"
@@ -53,7 +53,7 @@ export function SupportHero() {
               width={326}
               height={302}
               alt="IVRRex, the xDial AI agent, wearing a headset and giving a thumbs up."
-              className="relative mx-auto h-auto w-[70%] max-w-[16rem] select-none"
+              className="relative mx-auto h-auto w-[92%] max-w-[22rem] select-none"
               fetchPriority="high"
               decoding="async"
               draggable={false}
