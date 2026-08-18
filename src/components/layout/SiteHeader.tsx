@@ -69,7 +69,7 @@ export function SiteHeader() {
 
           <div className="ml-auto flex items-center gap-2 sm:gap-5">
             <SiteLink
-              href="/#log-in"
+              href={ROUTES.home}
               className="hidden text-base text-white/85 transition-colors hover:text-white sm:inline"
             >
               Log in
@@ -121,7 +121,7 @@ export function SiteHeader() {
                 <div className="mt-auto flex flex-col gap-3 border-t border-white/10 p-4">
                   <SheetClose asChild>
                     <Button asChild variant="brandOutline" size="cta">
-                      <SiteLink href="/#log-in">Log in</SiteLink>
+                      <SiteLink href={ROUTES.home}>Log in</SiteLink>
                     </Button>
                   </SheetClose>
                   <SheetClose asChild>

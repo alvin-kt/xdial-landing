@@ -1,5 +1,6 @@
 import { BookOpen, Mail, MessageCircle, Shield, User, Wrench } from 'lucide-react'
 
+import { ROUTES } from './navigation'
 import type { IconComponent, NavLink } from './types'
 
 export const SUPPORT_HERO = {
@@ -111,7 +112,7 @@ const SUPPORT_SIDEBAR_ITEMS: readonly SidebarItem[] = [
     icon: User,
     title: 'Inside Your Account',
     description: 'Log in to xDial and access support from the Help menu anytime.',
-    cta: { label: 'Go to xDial', href: '/#log-in' },
+    cta: { label: 'Go to xDial', href: ROUTES.home },
   },
 ]
 
@@ -126,37 +127,3 @@ export const SUPPORT_SIDEBAR = {
     note: 'Available 24/7 for urgent matters.',
   },
 } as const
-
-export const SUPPORT_FOOTER_COLUMNS = [
-  {
-    heading: 'Product',
-    links: [
-      { label: 'Overview', href: '/#product' },
-      { label: 'How It Works', href: '/how-it-works' },
-      { label: 'Integrations', href: '/#integrations' },
-    ],
-  },
-  {
-    heading: 'For Healthcare',
-    links: [
-      { label: 'Use Cases', href: '/#use-cases' },
-      { label: 'Security', href: '/security' },
-      { label: 'Compliance', href: '/#compliance' },
-    ],
-  },
-  {
-    heading: 'Company',
-    links: [
-      { label: 'About Us', href: '/#about' },
-      { label: 'Careers', href: '/#careers' },
-      { label: 'Contact', href: '/#contact' },
-    ],
-  },
-] as const
-
-export const SUPPORT_LEGAL_NAV = [
-  { label: 'Privacy Policy', href: '/#privacy' },
-  { label: 'Terms of Service', href: '/#terms' },
-  { label: 'HIPAA Compliance', href: '/#hipaa' },
-  { label: 'Support', href: '/support' },
-] as const

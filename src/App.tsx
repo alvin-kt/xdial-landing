@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { SiteFooter } from '@/components/layout/SiteFooter'
+import { Footer } from '@/components/layout/Footer'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { ROUTES } from '@/content/navigation'
 import { useRouter } from '@/lib/router'
@@ -12,35 +12,35 @@ import { SupportPage } from '@/pages/SupportPage'
 
 /**
  * Page titles are set per route so history entries stay tellable apart.
- * `chrome` controls the shared header/footer: `site` is the standard
- * layout, `bare` renders the page alone — Book a Demo builds its own
- * top bar, and Security/Support build their own expanded footer.
+ * Every route shares the same header and footer, except Book a Demo, which
+ * builds its own minimal top bar so nothing competes with its single call
+ * to action — it still gets the shared footer.
  */
 const PAGES = {
   [ROUTES.home]: {
     component: HomePage,
     title: 'xDial — Insurance Verification, Automated',
-    chrome: 'site',
+    header: true,
   },
   [ROUTES.howItWorks]: {
     component: HowItWorksPage,
     title: 'How It Works — xDial',
-    chrome: 'site',
+    header: true,
   },
   [ROUTES.security]: {
     component: SecurityPage,
     title: 'Security — xDial',
-    chrome: 'header-only',
+    header: true,
   },
   [ROUTES.support]: {
     component: SupportPage,
     title: 'Support — xDial',
-    chrome: 'header-only',
+    header: true,
   },
   [ROUTES.bookDemo]: {
     component: BookDemoPage,
     title: 'Book a Demo — xDial',
-    chrome: 'bare',
+    header: false,
   },
 } as const
 
@@ -54,14 +54,6 @@ export default function App() {
     document.title = page.title
   }, [page.title])
 
-  if (page.chrome === 'bare') {
-    return (
-      <main id="main">
-        <Page />
-      </main>
-    )
-  }
-
   return (
     <>
       <a
@@ -71,13 +63,13 @@ export default function App() {
         Skip to content
       </a>
 
-      <SiteHeader />
+      {page.header ? <SiteHeader /> : null}
 
       <main id="main">
         <Page />
       </main>
 
-      {page.chrome === 'site' ? <SiteFooter hipaaBadge={path === ROUTES.howItWorks} /> : null}
+      <Footer />
     </>
   )
 }

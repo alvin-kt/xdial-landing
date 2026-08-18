@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback: every route serves index.html so client-side routing (and a
+# hard refresh on any deep link, e.g. /security or /support) works instead of
+# 404ing at the CDN edge. Static assets under /images, /favicon.ico, etc. are
+# served directly since Netlify only falls back when no file matches.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

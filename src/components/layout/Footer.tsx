@@ -3,12 +3,14 @@ import { Logo } from '@/components/brand/Logo'
 import { Container } from '@/components/layout/Container'
 import {
   COPYRIGHT,
-  EXPANDED_LEGAL_NAV,
+  FOOTER_BADGES,
+  FOOTER_COLUMNS,
+  FOOTER_LEGAL_NAV,
   FOOTER_SOCIAL,
   FOOTER_TAGLINE,
   ROUTES,
 } from '@/content/navigation'
-import type { IconComponent, NavLink } from '@/content/types'
+import type { IconComponent } from '@/content/types'
 import { SiteLink } from '@/lib/router'
 
 const SOCIAL_ICONS: Record<(typeof FOOTER_SOCIAL)[number]['label'], IconComponent> = {
@@ -16,36 +18,12 @@ const SOCIAL_ICONS: Record<(typeof FOOTER_SOCIAL)[number]['label'], IconComponen
   X: XIcon,
 }
 
-interface FooterColumn {
-  readonly heading: string
-  readonly links: readonly NavLink[]
-}
-
-interface FooterBadge {
-  readonly icon: IconComponent
-  /** `\n`-separated, rendered on two lines as in the reference. */
-  readonly label: string
-}
-
-interface SiteFooterExpandedProps {
-  columns: readonly FooterColumn[]
-  /** The HIPAA/BAA marks under the tagline — Security only. */
-  badges?: readonly FooterBadge[]
-  /** Support appends its own "Support" link to the shared legal row. */
-  legalNav?: readonly NavLink[]
-}
-
 /**
- * The full, multi-column footer used by Security and Support. Richer than
- * the single-row `SiteFooter` the marketing pages use — those keep their own
- * reference-matched layout — so this is a separate component rather than a
- * variant of it.
+ * The one footer every page shares — canonically the Security page's design:
+ * dark, multi-column, with the HIPAA/BAA badges under the tagline. See
+ * `content/navigation.ts` for the shared columns, badges and legal links.
  */
-export function SiteFooterExpanded({
-  columns,
-  badges,
-  legalNav = EXPANDED_LEGAL_NAV,
-}: SiteFooterExpandedProps) {
+export function Footer() {
   return (
     <footer className="bg-navy-950">
       <Container>
@@ -62,26 +40,28 @@ export function SiteFooterExpanded({
               {FOOTER_TAGLINE}
             </p>
 
-            {badges ? (
-              <ul className="mt-3 flex items-center gap-5 border-t border-white/5 pt-3">
-                {badges.map(({ icon: Icon, label }) => (
-                  <li key={label} className="flex items-center gap-3">
-                    <Icon aria-hidden="true" className="size-9 shrink-0 text-frost-300" strokeWidth={1.5} />
-                    <span className="text-sm leading-tight font-semibold text-white">
-                      {label.split('\n').map((line) => (
-                        <span key={line} className="block">
-                          {line}
-                        </span>
-                      ))}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+            <ul className="mt-3 flex items-center gap-5 border-t border-white/5 pt-3">
+              {FOOTER_BADGES.map(({ icon: Icon, label }) => (
+                <li key={label} className="flex items-center gap-3">
+                  <Icon
+                    aria-hidden="true"
+                    className="size-9 shrink-0 text-frost-300"
+                    strokeWidth={1.5}
+                  />
+                  <span className="text-sm leading-tight font-semibold text-white">
+                    {label.split('\n').map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-4 lg:gap-x-6">
-            {columns.map((column) => (
+            {FOOTER_COLUMNS.map((column) => (
               <nav key={column.heading} aria-label={column.heading}>
                 <p className="text-sm font-bold tracking-[0.08em] text-white uppercase">
                   {column.heading}
@@ -134,7 +114,7 @@ export function SiteFooterExpanded({
           <p className="text-[0.6875rem] text-frost-500">{COPYRIGHT}</p>
           <nav aria-label="Legal">
             <ul className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              {legalNav.map((link, index) => (
+              {FOOTER_LEGAL_NAV.map((link, index) => (
                 <li key={link.label} className="flex items-center gap-3">
                   {index > 0 ? <span className="text-white/15">|</span> : null}
                   <SiteLink

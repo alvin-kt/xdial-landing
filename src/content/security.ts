@@ -2,7 +2,6 @@ import {
   Cloud,
   ClipboardCheck,
   Eye,
-  FileLock2,
   FileText,
   Lock,
   RefreshCw,
@@ -122,35 +121,3 @@ export const SECURITY_CONTACT = {
   cta: { label: 'Contact our team', href: '/support' },
   email: 'Support@xdialai.ai',
 } as const
-
-export const SECURITY_FOOTER_BADGES = [
-  { icon: ShieldCheck, label: 'HIPAA\nCompliant' },
-  { icon: FileLock2, label: 'BAAs\nAvailable' },
-] as const
-
-export const SECURITY_FOOTER_COLUMNS = [
-  {
-    heading: 'Product',
-    links: [
-      { label: 'Insurance Verification', href: '/#product' },
-      { label: 'How It Works', href: '/how-it-works' },
-      { label: 'Integrations', href: '/#integrations' },
-    ],
-  },
-  {
-    heading: 'Company',
-    links: [
-      { label: 'About Us', href: '/#about' },
-      { label: 'Careers', href: '/#careers' },
-      { label: 'Contact', href: '/#contact' },
-    ],
-  },
-  {
-    heading: 'Resources',
-    links: [
-      { label: 'Blog', href: '/#blog' },
-      { label: 'Help Center', href: '/#help-center' },
-      { label: 'Support', href: '/support' },
-    ],
-  },
-] as const

@@ -50,15 +50,15 @@ export function BookDemoInfo() {
 
       <p className="mt-5 max-w-md text-lead text-frost-300">{BOOK_DEMO_HERO.paragraph}</p>
 
-      <ul className="mt-8 flex flex-col gap-5">
+      <ul className="mt-8 flex flex-col gap-6">
         {BOOK_DEMO_HERO.checklist.map(({ title, description }) => (
-          <li key={title} className="flex items-start gap-3.5">
-            <IconCircle size="md" className="mt-0.5 bg-brand-600 text-white">
+          <li key={title} className="flex items-start gap-4">
+            <IconCircle size="lg" className="mt-0.5 bg-brand-600 text-white">
               <Check aria-hidden="true" strokeWidth={3} />
             </IconCircle>
-            <span className="min-w-0">
-              <span className="block text-base font-semibold text-white">{title}</span>
-              <span className="mt-0.5 block text-sm text-frost-300">{description}</span>
+            <span className="min-w-0 pt-1">
+              <span className="block text-lg font-bold text-white">{title}</span>
+              <span className="mt-1 block text-sm text-frost-300">{description}</span>
             </span>
           </li>
         ))}
@@ -66,9 +66,9 @@ export function BookDemoInfo() {
 
       <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:items-end">
         <img
-          src="/images/ivrrex-thumbsup.png"
-          width={326}
-          height={302}
+          src="/images/ivrrex-bookdemo-thumbsup.png"
+          width={330}
+          height={350}
           alt="IVRRex, the xDial AI agent, wearing a headset and giving a thumbs up."
           className="h-auto w-[15rem] shrink-0 select-none sm:w-[17rem]"
           loading="lazy"

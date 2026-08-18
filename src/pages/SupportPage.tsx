@@ -1,16 +1,11 @@
 import { useState } from 'react'
 
 import { Container } from '@/components/layout/Container'
-import { SiteFooterExpanded } from '@/components/layout/SiteFooterExpanded'
 import { SupportCategoryCards } from '@/components/support/SupportCategoryCards'
 import { SupportForm } from '@/components/support/SupportForm'
 import { SupportHero } from '@/components/support/SupportHero'
 import { SupportSidebar } from '@/components/support/SupportSidebar'
-import {
-  SUPPORT_FOOTER_COLUMNS,
-  SUPPORT_LEGAL_NAV,
-  type SupportCategoryId,
-} from '@/content/support'
+import type { SupportCategoryId } from '@/content/support'
 
 export function SupportPage() {
   const [category, setCategory] = useState<SupportCategoryId>('issue')
@@ -28,8 +23,6 @@ export function SupportPage() {
           </div>
         </Container>
       </div>
-
-      <SiteFooterExpanded columns={SUPPORT_FOOTER_COLUMNS} legalNav={SUPPORT_LEGAL_NAV} />
     </>
   )
 }

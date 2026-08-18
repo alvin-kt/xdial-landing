@@ -34,13 +34,13 @@ export function VerificationSteps() {
                   {index < STAGES.length - 1 ? (
                     <span
                       aria-hidden="true"
-                      className="absolute top-16 -bottom-10 left-6 hidden border-l border-dashed border-ink-200 lg:block"
+                      className="absolute top-[4.5rem] -bottom-10 left-8 hidden border-l border-dashed border-ink-200 lg:block"
                     />
                   ) : null}
 
                   <span
                     aria-hidden="true"
-                    className="flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-50 text-h4 font-bold text-brand-600"
+                    className="flex size-16 shrink-0 items-center justify-center rounded-full bg-brand-100 text-h2 font-extrabold text-brand-600"
                   >
                     {step.number}
                   </span>

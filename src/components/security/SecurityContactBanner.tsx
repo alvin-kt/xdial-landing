@@ -13,9 +13,9 @@ export function SecurityContactBanner() {
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <img
-                src="/images/ivrrex-thumbsup.png"
-                width={326}
-                height={302}
+                src="/images/ivrrex-security-arms-crossed.png"
+                width={234}
+                height={225}
                 alt=""
                 aria-hidden="true"
                 className="h-24 w-auto shrink-0 select-none sm:h-28"
