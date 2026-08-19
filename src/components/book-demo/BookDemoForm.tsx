@@ -6,7 +6,7 @@ import { BOOK_DEMO_FORM } from '@/content/book-demo'
 import { cn } from '@/lib/utils'
 
 const inputClass =
-  'h-11 w-full rounded-lg border border-ink-200 bg-white px-3.5 text-sm text-ink-900 placeholder:text-ink-400 transition-colors outline-none focus:border-brand-500 focus:ring-3 focus:ring-brand-500/15'
+  'h-10 w-full rounded-lg border border-ink-200 bg-white px-3.5 text-sm text-ink-900 placeholder:text-ink-400 transition-colors outline-none focus:border-brand-500 focus:ring-3 focus:ring-brand-500/15'
 
 function Required() {
   return (
@@ -26,7 +26,7 @@ export function BookDemoForm() {
   }
 
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-card-lg sm:p-7">
+    <div className="rounded-2xl bg-white p-4 shadow-card-lg sm:p-5">
       {submitted ? (
         <div className="flex flex-col items-center py-10 text-center">
           <span className="flex size-14 items-center justify-center rounded-full bg-success-bg">
@@ -41,10 +41,10 @@ export function BookDemoForm() {
       ) : (
         <>
           <h1 className="text-h3">{BOOK_DEMO_FORM.title}</h1>
-          <p className="mt-1.5 max-w-md text-sm text-ink-600">{BOOK_DEMO_FORM.paragraph}</p>
+          <p className="mt-1 max-w-md text-sm text-ink-600">{BOOK_DEMO_FORM.paragraph}</p>
 
-          <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-4">
-            <div className="grid gap-4 sm:grid-cols-2">
+          <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-3">
+            <div className="grid gap-3 sm:grid-cols-2">
               <label className="block">
                 <span className="text-sm font-medium text-ink-900">
                   {f.firstName.label}
@@ -54,7 +54,7 @@ export function BookDemoForm() {
                   type="text"
                   required
                   placeholder={f.firstName.placeholder}
-                  className={cn(inputClass, 'mt-1.5')}
+                  className={cn(inputClass, 'mt-1')}
                 />
               </label>
               <label className="block">
@@ -66,7 +66,7 @@ export function BookDemoForm() {
                   type="text"
                   required
                   placeholder={f.lastName.placeholder}
-                  className={cn(inputClass, 'mt-1.5')}
+                  className={cn(inputClass, 'mt-1')}
                 />
               </label>
             </div>
@@ -80,7 +80,7 @@ export function BookDemoForm() {
                 type="email"
                 required
                 placeholder={f.workEmail.placeholder}
-                className={cn(inputClass, 'mt-1.5')}
+                className={cn(inputClass, 'mt-1')}
               />
             </label>
 
@@ -93,7 +93,7 @@ export function BookDemoForm() {
                 type="text"
                 required
                 placeholder={f.company.placeholder}
-                className={cn(inputClass, 'mt-1.5')}
+                className={cn(inputClass, 'mt-1')}
               />
             </label>
 
@@ -102,7 +102,7 @@ export function BookDemoForm() {
               <input
                 type="text"
                 placeholder={f.jobTitle.placeholder}
-                className={cn(inputClass, 'mt-1.5')}
+                className={cn(inputClass, 'mt-1')}
               />
             </label>
 
@@ -111,7 +111,7 @@ export function BookDemoForm() {
                 {f.volume.label}
                 <Required />
               </span>
-              <span className="relative mt-1.5 block">
+              <span className="relative mt-1 block">
                 <select required defaultValue="" className={cn(inputClass, 'appearance-none pr-9')}>
                   <option value="" disabled>
                     {f.volume.placeholder}
@@ -134,7 +134,7 @@ export function BookDemoForm() {
               <textarea
                 rows={2}
                 placeholder={f.notes.placeholder}
-                className={cn(inputClass, 'mt-1.5 h-auto resize-y py-3')}
+                className={cn(inputClass, 'mt-1 h-auto resize-y py-2.5')}
               />
             </label>
 

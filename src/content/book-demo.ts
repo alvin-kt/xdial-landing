@@ -20,6 +20,8 @@ export const BOOK_DEMO_HERO = {
   ],
 } as const
 
+export const BOOK_DEMO_BUBBLE = ["Let's do this!", 'See xDial live.'] as const
+
 export const BOOK_DEMO_CALL = {
   title: 'IVRRex is on the call...',
   steps: [
