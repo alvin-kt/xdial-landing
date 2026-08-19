@@ -87,13 +87,13 @@ export function Hero() {
                 lines={HERO_BUBBLES.agent.lines}
                 tone={HERO_BUBBLES.agent.tone}
                 tailX="76%"
-                className="absolute bottom-[90%] left-[9%] z-10 w-[40%] max-w-[11.5rem]"
+                className="absolute bottom-[102%] left-[9%] z-10 w-[40%] max-w-[11.5rem]"
               />
               <HeroBubble
                 lines={HERO_BUBBLES.payer.lines}
                 tone={HERO_BUBBLES.payer.tone}
                 tailX="58%"
-                className="absolute bottom-[81%] left-[57%] z-10 w-[41%] max-w-[13rem]"
+                className="absolute bottom-[94%] left-[57%] z-10 w-[41%] max-w-[13rem]"
               />
             </div>
           </div>

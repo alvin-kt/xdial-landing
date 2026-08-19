@@ -47,14 +47,14 @@ export function SupportHero() {
               width={1257}
               height={1180}
               alt="IVRRex, the xDial AI agent, wearing a headset and giving a thumbs up."
-              className="relative z-0 h-auto w-[92%] max-w-[28rem] select-none"
+              className="relative z-0 h-auto w-[92%] max-w-[28rem] -translate-x-1/2 select-none"
               fetchPriority="high"
               decoding="async"
               draggable={false}
             />
 
-            {/* Speech bubble, anchored to the right of the mascot's head. */}
-            <div className="absolute top-[10%] right-0 z-10 w-[58%] max-w-[15.5rem] rounded-2xl border border-white/15 bg-navy-900/90 px-4 py-3.5 shadow-card-lg backdrop-blur-sm sm:top-[14%]">
+            {/* Speech bubble, anchored beside the mascot's mouth. */}
+            <div className="absolute top-[38%] right-[6%] z-10 w-[58%] max-w-[13rem] rounded-2xl border border-white/15 bg-navy-900/90 px-4 py-3.5 shadow-card-lg backdrop-blur-sm sm:top-[30%]">
               <p className="text-base leading-snug font-semibold text-white">
                 {SUPPORT_HERO.bubble[0]}
               </p>
