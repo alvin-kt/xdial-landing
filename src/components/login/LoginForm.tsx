@@ -22,14 +22,14 @@ export function LoginForm() {
   }
 
   return (
-    <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-card-lg sm:p-7">
+    <div className="w-full max-w-md rounded-2xl bg-white p-5 shadow-card-lg sm:p-7">
       <p className="text-center text-h3">
         <span aria-hidden="true">👋 </span>
         {LOGIN_FORM.greeting}
       </p>
       <p className="mt-1.5 text-center text-sm text-ink-600">{LOGIN_FORM.subheading}</p>
 
-      <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-3 sm:mt-5 sm:gap-4">
         <label className="block">
           <span className="text-sm font-medium text-ink-900">{f.email.label}</span>
           <span className="relative mt-1.5 block">
@@ -96,7 +96,7 @@ export function LoginForm() {
           <span aria-hidden="true" className="h-px flex-1 bg-ink-200" />
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2.5 sm:gap-3">
           {LOGIN_FORM.sso.map(({ label, provider }) => {
             const Icon = ssoIcons[provider]
             return (

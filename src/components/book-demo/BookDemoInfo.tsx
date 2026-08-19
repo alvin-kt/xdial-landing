@@ -78,7 +78,7 @@ function Mascot() {
 /** The left column: pitch, checklist, mascot and call card, trust badges. */
 export function BookDemoInfo() {
   return (
-    <div className="flex flex-col">
+    <div className="hidden flex-col md:flex">
       <h1 className="text-pretty text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.1] font-bold tracking-tight text-white">
         {BOOK_DEMO_HERO.headline.lead}
         <span className="text-brand-500">{BOOK_DEMO_HERO.headline.accent}</span>

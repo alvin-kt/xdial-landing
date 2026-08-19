@@ -12,7 +12,7 @@ import { SiteLink } from '@/lib/router'
 export function LoginInfo() {
   return (
     <div
-      className="relative isolate flex min-h-[26rem] flex-col overflow-hidden rounded-3xl bg-navy-950 bg-cover bg-top p-6 sm:p-8 lg:min-h-0 lg:p-9"
+      className="relative isolate hidden flex-col overflow-hidden rounded-3xl bg-navy-950 bg-cover bg-top md:flex md:min-h-[26rem] md:p-8 lg:min-h-0 lg:p-9"
       style={{ backgroundImage: 'url(/images/login-scene.png)' }}
     >
       <div
