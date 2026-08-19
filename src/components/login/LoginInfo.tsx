@@ -12,7 +12,7 @@ import { SiteLink } from '@/lib/router'
 export function LoginInfo() {
   return (
     <div
-      className="relative isolate flex min-h-[30rem] flex-col overflow-hidden rounded-3xl bg-navy-950 bg-cover bg-top p-8 sm:p-10 lg:min-h-[42rem] lg:p-12"
+      className="relative isolate flex min-h-[26rem] flex-col overflow-hidden rounded-3xl bg-navy-950 bg-cover bg-top p-6 sm:p-8 lg:min-h-0 lg:p-9"
       style={{ backgroundImage: 'url(/images/login-scene.png)' }}
     >
       <div
@@ -28,7 +28,7 @@ export function LoginInfo() {
         <Logo />
       </SiteLink>
 
-      <h1 className="mt-10 max-w-md text-[clamp(1.75rem,3.1vw,2.5rem)] leading-[1.15] font-bold tracking-tight text-pretty text-white lg:mt-12">
+      <h1 className="mt-6 max-w-md text-[clamp(1.5rem,2.6vw,2.125rem)] leading-[1.15] font-bold tracking-tight text-pretty text-white lg:mt-7">
         <span className="block">{LOGIN_HERO.headline.line1}</span>
         <span className="block">
           {LOGIN_HERO.headline.line2}
@@ -36,9 +36,9 @@ export function LoginInfo() {
         </span>
       </h1>
 
-      <p className="mt-5 max-w-sm text-lead text-frost-300">{LOGIN_HERO.paragraph}</p>
+      <p className="mt-3 max-w-sm text-base text-frost-300">{LOGIN_HERO.paragraph}</p>
 
-      <ul className="mt-8 flex flex-col gap-4">
+      <ul className="mt-5 flex flex-col gap-2.5">
         {LOGIN_HERO.checklist.map(({ icon: Icon, title }) => (
           <li key={title} className="flex items-center gap-3.5">
             <IconCircle size="sm" className="bg-brand-600 text-white">
@@ -54,7 +54,7 @@ export function LoginInfo() {
         width={1536}
         height={1024}
         alt="IVRRex, the xDial AI agent, giving a thumbs up at a laptop and saying: let's verify some benefits!"
-        className="mt-auto -mb-8 -ml-8 w-[calc(100%+4rem)] max-w-none pt-8 select-none sm:-mb-10 sm:-ml-10 sm:w-[calc(100%+5rem)] lg:-mb-12 lg:-ml-12 lg:w-[calc(100%+6rem)]"
+        className="mt-auto -mb-6 -ml-6 w-[calc(100%+3rem)] max-w-none pt-4 select-none sm:-mb-8 sm:-ml-8 sm:w-[calc(100%+4rem)] lg:-mb-9 lg:-ml-9 lg:w-[calc(100%+4.5rem)]"
         loading="lazy"
         decoding="async"
         draggable={false}

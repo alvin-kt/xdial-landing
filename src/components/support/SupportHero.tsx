@@ -41,27 +41,29 @@ export function SupportHero() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[24rem] lg:mx-0 lg:ml-auto">
-            {/* Speech bubble, anchored above the mascot's head. */}
-            <div className="relative z-10 mx-auto mb-[-1.1rem] w-[85%] rounded-2xl border border-white/12 bg-navy-900/90 px-5 py-4 shadow-card-lg backdrop-blur-sm sm:ml-16">
-              <p className="text-lg font-semibold text-white">{SUPPORT_HERO.bubble[0]}</p>
-              <p className="mt-1 text-sm text-frost-300">{SUPPORT_HERO.bubble[1]}</p>
-              <span
-                aria-hidden="true"
-                className="absolute -bottom-2 left-10 size-4 rotate-45 border-r border-b border-white/12 bg-navy-900"
-              />
-            </div>
-
+          <div className="relative mx-auto flex w-full max-w-[34rem] items-center justify-center lg:mx-0 lg:ml-auto lg:justify-start">
             <img
               src="/images/ivrrex-support-thumbsup-shirt.png"
               width={1257}
               height={1180}
               alt="IVRRex, the xDial AI agent, wearing a headset and giving a thumbs up."
-              className="relative mx-auto h-auto w-[92%] max-w-[22rem] select-none"
+              className="relative z-0 h-auto w-[92%] max-w-[28rem] select-none"
               fetchPriority="high"
               decoding="async"
               draggable={false}
             />
+
+            {/* Speech bubble, anchored to the right of the mascot's head. */}
+            <div className="absolute top-[10%] right-0 z-10 w-[58%] max-w-[15.5rem] rounded-2xl border border-white/15 bg-navy-900/90 px-4 py-3.5 shadow-card-lg backdrop-blur-sm sm:top-[14%]">
+              <p className="text-base leading-snug font-semibold text-white">
+                {SUPPORT_HERO.bubble[0]}
+              </p>
+              <p className="mt-1 text-sm text-frost-300">{SUPPORT_HERO.bubble[1]}</p>
+              <span
+                aria-hidden="true"
+                className="absolute top-6 -left-2 size-4 rotate-45 border-b border-l border-white/15 bg-navy-900"
+              />
+            </div>
           </div>
         </div>
       </Container>

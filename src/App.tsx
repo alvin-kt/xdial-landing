@@ -15,8 +15,8 @@ import { SupportPage } from '@/pages/SupportPage'
  * Page titles are set per route so history entries stay tellable apart.
  * Every route shares the same header and footer, except Book a Demo and
  * Login, which build their own minimal top bar so nothing competes with
- * their single call to action. Book a Demo still gets the shared footer;
- * Login omits it too, since the reference design has none.
+ * their single call to action — and omit the footer too, since both
+ * reference designs fit in one screen with none.
  */
 const PAGES = {
   [ROUTES.home]: {
@@ -47,7 +47,7 @@ const PAGES = {
     component: BookDemoPage,
     title: 'Book a Demo — xDial',
     header: false,
-    footer: true,
+    footer: false,
   },
   [ROUTES.login]: {
     component: LoginPage,

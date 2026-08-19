@@ -26,7 +26,7 @@ export function BookDemoForm() {
   }
 
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-card-lg sm:p-8">
+    <div className="rounded-2xl bg-white p-6 shadow-card-lg sm:p-7">
       {submitted ? (
         <div className="flex flex-col items-center py-10 text-center">
           <span className="flex size-14 items-center justify-center rounded-full bg-success-bg">
@@ -40,11 +40,11 @@ export function BookDemoForm() {
         </div>
       ) : (
         <>
-          <h1 className="text-h2">{BOOK_DEMO_FORM.title}</h1>
-          <p className="mt-2 max-w-md text-sm text-ink-600">{BOOK_DEMO_FORM.paragraph}</p>
+          <h1 className="text-h3">{BOOK_DEMO_FORM.title}</h1>
+          <p className="mt-1.5 max-w-md text-sm text-ink-600">{BOOK_DEMO_FORM.paragraph}</p>
 
-          <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-5">
-            <div className="grid gap-5 sm:grid-cols-2">
+          <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-4">
+            <div className="grid gap-4 sm:grid-cols-2">
               <label className="block">
                 <span className="text-sm font-medium text-ink-900">
                   {f.firstName.label}
@@ -132,7 +132,7 @@ export function BookDemoForm() {
             <label className="block">
               <span className="text-sm font-medium text-ink-900">{f.notes.label}</span>
               <textarea
-                rows={4}
+                rows={2}
                 placeholder={f.notes.placeholder}
                 className={cn(inputClass, 'mt-1.5 h-auto resize-y py-3')}
               />

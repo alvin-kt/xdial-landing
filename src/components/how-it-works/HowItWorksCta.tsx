@@ -9,15 +9,15 @@ export function HowItWorksCta() {
   return (
     <section id="pricing" className="bg-mist pb-12 lg:pb-16">
       <Container>
-        <div className="overflow-hidden rounded-2xl bg-navy-950 px-6 py-8 sm:px-8 sm:py-9 lg:px-10">
-          <div className="flex flex-col items-center gap-7 lg:flex-row lg:items-center lg:gap-10">
+        <div className="overflow-hidden rounded-2xl bg-navy-950 pr-6 sm:pr-8 lg:pr-10">
+          <div className="flex flex-col items-center gap-5 py-8 lg:flex-row lg:items-center lg:gap-8 lg:py-0">
             <img
               src="/images/ivrrex-thumbsup.png"
               width={1026}
               height={1217}
               alt=""
               aria-hidden="true"
-              className="h-28 w-auto shrink-0 select-none sm:h-36"
+              className="-mb-4 h-44 w-auto shrink-0 -translate-x-2 select-none sm:h-52 lg:-my-6 lg:h-64"
               loading="lazy"
               decoding="async"
               draggable={false}
@@ -42,7 +42,7 @@ export function HowItWorksCta() {
               <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
                 {HIW_CTA.assurances.map(({ icon: Icon, label }, index) => (
                   <li key={label} className="flex items-center gap-2">
-                    <Icon aria-hidden="true" className="size-4 text-brand-500" />
+                    <Icon aria-hidden="true" className="size-4.5 text-brand-500" />
                     <span className="text-sm text-white/85">{label}</span>
                     {index < HIW_CTA.assurances.length - 1 ? (
                       <span aria-hidden="true" className="ml-2 text-white/30">

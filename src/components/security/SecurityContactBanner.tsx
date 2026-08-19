@@ -9,7 +9,7 @@ export function SecurityContactBanner() {
   return (
     <section className="bg-mist pb-12 lg:pb-16">
       <Container>
-        <div className="relative overflow-hidden rounded-2xl bg-brand-50/60 px-6 py-8 sm:px-8 sm:py-9 lg:px-10">
+        <div className="relative overflow-hidden rounded-2xl bg-brand-100/80 py-8 pr-6 sm:py-9 sm:pr-8 lg:pr-10">
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <img
@@ -18,7 +18,7 @@ export function SecurityContactBanner() {
                 height={1210}
                 alt=""
                 aria-hidden="true"
-                className="h-24 w-auto shrink-0 select-none sm:h-28"
+                className="-my-4 h-44 w-auto shrink-0 -translate-x-2 select-none sm:h-52 lg:-my-6 lg:h-56"
                 loading="lazy"
                 decoding="async"
                 draggable={false}

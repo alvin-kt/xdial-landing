@@ -17,8 +17,8 @@ export function BookDemoPage() {
     <div className="relative min-h-screen overflow-hidden hero-scene">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 hero-grid" />
 
-      <Container className="relative">
-        <div className="flex items-center justify-end gap-6 py-6 sm:py-7">
+      <Container className="relative flex min-h-screen flex-col">
+        <div className="flex items-center justify-end gap-6 py-5 sm:py-6">
           <SiteLink
             href={ROUTES.home}
             className="flex items-center gap-2 text-sm text-white/80 transition-colors hover:text-white"
@@ -31,7 +31,7 @@ export function BookDemoPage() {
           </SiteLink>
         </div>
 
-        <div className="grid gap-10 pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start lg:gap-14 lg:pb-24">
+        <div className="grid flex-1 gap-10 pb-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-14 lg:pb-10">
           <BookDemoInfo />
           <BookDemoForm />
         </div>

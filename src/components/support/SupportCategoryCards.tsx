@@ -14,7 +14,7 @@ export function SupportCategoryCards({ active, onSelect }: SupportCategoryCardsP
   return (
     <div className="relative z-10 bg-mist">
       <Container>
-        <ul className="grid -translate-y-10 gap-5 sm:grid-cols-3 sm:gap-6">
+        <ul className="grid -translate-y-24 gap-5 sm:grid-cols-3 sm:gap-6">
           {SUPPORT_CATEGORIES.map(({ id, icon: Icon, title, description }) => {
             const isActive = id === active
             return (

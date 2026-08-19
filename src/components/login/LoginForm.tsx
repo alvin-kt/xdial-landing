@@ -22,14 +22,14 @@ export function LoginForm() {
   }
 
   return (
-    <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-card-lg sm:p-8">
+    <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-card-lg sm:p-7">
       <p className="text-center text-h3">
         <span aria-hidden="true">👋 </span>
         {LOGIN_FORM.greeting}
       </p>
       <p className="mt-1.5 text-center text-sm text-ink-600">{LOGIN_FORM.subheading}</p>
 
-      <form onSubmit={handleSubmit} className="mt-7 flex flex-col gap-5">
+      <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-4">
         <label className="block">
           <span className="text-sm font-medium text-ink-900">{f.email.label}</span>
           <span className="relative mt-1.5 block">

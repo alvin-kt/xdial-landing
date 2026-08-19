@@ -15,9 +15,9 @@ import { SiteLink } from '@/lib/router'
  */
 export function LoginPage() {
   return (
-    <div className="min-h-screen bg-mist">
-      <Container>
-        <div className="flex items-center justify-end gap-4 py-6 sm:py-7">
+    <div className="flex min-h-screen flex-col bg-mist">
+      <Container className="flex flex-1 flex-col">
+        <div className="flex items-center justify-end gap-4 py-4 sm:py-5">
           <span className="hidden text-sm text-ink-600 sm:inline">
             {LOGIN_SIGNUP_PROMPT.question}
           </span>
@@ -34,13 +34,13 @@ export function LoginPage() {
           </Button>
         </div>
 
-        <div className="grid gap-8 pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start lg:gap-10 lg:pb-20">
+        <div className="grid flex-1 gap-8 pb-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch lg:gap-10 lg:pb-8">
           <LoginInfo />
 
-          <div className="flex flex-col items-center lg:pt-6">
+          <div className="flex flex-col items-center justify-center">
             <LoginForm />
 
-            <p className="mt-7 text-center text-sm text-ink-600">
+            <p className="mt-5 text-center text-sm text-ink-600">
               {LOGIN_HELP.prompt}{' '}
               <a
                 href={LOGIN_HELP.href}
