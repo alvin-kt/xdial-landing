@@ -47,21 +47,19 @@ export function SupportHero() {
               width={1257}
               height={1180}
               alt="IVRRex, the xDial AI agent, wearing a headset and giving a thumbs up."
-              className="relative z-0 h-auto w-[92%] max-w-[28rem] -translate-x-1/2 select-none"
+              className="relative z-0 h-auto w-[80%] max-w-[24rem] -translate-x-1/3 -translate-y-12 select-none"
               fetchPriority="high"
               decoding="async"
               draggable={false}
             />
 
             {/* Speech bubble, anchored beside the mascot's mouth. */}
-            <div className="absolute top-[38%] right-[6%] z-10 w-[58%] max-w-[13rem] rounded-2xl border border-white/15 bg-navy-900/90 px-4 py-3.5 shadow-card-lg backdrop-blur-sm sm:top-[30%]">
-              <p className="text-base leading-snug font-semibold text-white">
-                {SUPPORT_HERO.bubble[0]}
-              </p>
-              <p className="mt-1 text-sm text-frost-300">{SUPPORT_HERO.bubble[1]}</p>
+            <div className="absolute top-[34%] right-[10%] z-10 w-[50%] max-w-[11.5rem] rounded-lg border border-navy-700 bg-navy-850 px-3 py-2.5 shadow-card sm:top-[28%]">
+              <p className="text-sm font-bold text-white">{SUPPORT_HERO.bubble[0]}</p>
+              <p className="mt-0.5 text-xs text-frost-300">{SUPPORT_HERO.bubble[1]}</p>
               <span
                 aria-hidden="true"
-                className="absolute top-6 -left-2 size-4 rotate-45 border-b border-l border-white/15 bg-navy-900"
+                className="absolute top-1/2 -left-1.5 size-3 -translate-y-1/2 rotate-45 border-b border-l border-navy-700 bg-navy-850"
               />
             </div>
           </div>

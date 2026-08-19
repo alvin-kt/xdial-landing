@@ -7,7 +7,7 @@ import { SiteLink } from '@/lib/router'
 
 export function HowItWorksCta() {
   return (
-    <section id="pricing" className="bg-mist pb-12 lg:pb-16">
+    <section id="pricing" className="bg-mist pt-5 pb-12 lg:pb-16">
       <Container>
         <div className="overflow-hidden rounded-2xl bg-navy-950 pr-6 sm:pr-8 lg:pr-10">
           <div className="flex flex-col items-center gap-5 py-8 lg:flex-row lg:items-center lg:gap-8 lg:py-0">
