@@ -8,7 +8,7 @@ import { SiteLink } from '@/lib/router'
 
 export function ClosingCta() {
   return (
-    <section id="pricing" className="bg-mist">
+    <section id="pricing" className="bg-mist pb-12 lg:pb-16">
       <Container>
         <div className="overflow-hidden rounded-2xl bg-navy-850 px-6 py-8 sm:px-8 sm:py-9 lg:px-10">
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:gap-10">
