@@ -120,3 +120,42 @@ export function XIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+/**
+ * SSO provider marks for the login form's "continue with" row. Both are
+ * fixed multi-colour brand glyphs, so — unlike the icons above — they ignore
+ * `currentColor` and paint their own official colours at any size.
+ */
+export function GoogleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fill="#4285F4"
+        d="M23.52 12.27c0-.82-.07-1.42-.22-2.05H12v3.72h6.61c-.13 1.09-.86 2.74-2.47 3.85l-.02.15 3.59 2.75.25.02c2.28-2.09 3.56-5.16 3.56-8.44Z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 23.5c3.24 0 5.96-1.06 7.95-2.88l-3.79-2.92c-1.01.71-2.38 1.2-4.16 1.2a7.22 7.22 0 0 1-6.83-4.94l-.14.01-3.73 2.86-.05.13A11.98 11.98 0 0 0 12 23.5Z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.17 13.96a7.36 7.36 0 0 1-.4-2.36c0-.82.15-1.62.39-2.36l-.01-.16-3.78-2.9-.12.06A11.94 11.94 0 0 0 0 11.6c0 1.93.47 3.76 1.29 5.36l3.88-3Z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 4.5c2.26 0 3.78.97 4.65 1.79l3.39-3.3C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.69 1.29 6.6l3.87 3A7.24 7.24 0 0 1 12 4.5Z"
+      />
+    </svg>
+  )
+}
+
+export function MicrosoftIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path fill="#F25022" d="M2 2h9.5v9.5H2z" />
+      <path fill="#7FBA00" d="M12.5 2H22v9.5h-9.5z" />
+      <path fill="#00A4EF" d="M2 12.5h9.5V22H2z" />
+      <path fill="#FFB900" d="M12.5 12.5H22V22h-9.5z" />
+    </svg>
+  )
+}

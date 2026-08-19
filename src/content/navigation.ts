@@ -9,6 +9,7 @@ export const ROUTES = {
   security: '/security',
   support: '/support',
   bookDemo: '/book-a-demo',
+  login: '/login',
 } as const
 
 /**

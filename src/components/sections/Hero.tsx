@@ -70,8 +70,8 @@ export function Hero() {
               />
               <img
                 src="/images/hero-mascots.png"
-                width={384}
-                height={256}
+                width={1536}
+                height={909}
                 alt="IVRRex, the xDial AI agent, calmly wearing a headset while an angry desk phone shouts hold-music platitudes back at it."
                 className="relative block h-auto w-full max-w-[45rem] select-none"
                 fetchPriority="high"

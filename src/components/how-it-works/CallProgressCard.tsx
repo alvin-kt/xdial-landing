@@ -9,8 +9,8 @@ export function CallProgressCard() {
         <div className="flex w-full shrink-0 justify-center bg-gradient-to-b from-sky-tint to-white px-6 pt-6 sm:w-auto sm:bg-gradient-to-r sm:px-7 sm:py-6">
           <img
             src="/images/ivrrex-calling.png"
-            width={308}
-            height={319}
+            width={923}
+            height={1203}
             alt=""
             aria-hidden="true"
             className="h-28 w-auto select-none sm:h-36"

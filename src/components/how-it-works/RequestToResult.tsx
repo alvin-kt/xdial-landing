@@ -26,8 +26,8 @@ export function RequestToResult() {
                     {'image' in step ? (
                       <img
                         src={step.image}
-                        width={314}
-                        height={314}
+                        width={297}
+                        height={242}
                         alt=""
                         aria-hidden="true"
                         className="size-15 object-contain select-none"

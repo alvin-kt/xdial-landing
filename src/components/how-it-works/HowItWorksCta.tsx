@@ -13,8 +13,8 @@ export function HowItWorksCta() {
           <div className="flex flex-col items-center gap-7 lg:flex-row lg:items-center lg:gap-10">
             <img
               src="/images/ivrrex-thumbsup.png"
-              width={326}
-              height={302}
+              width={1026}
+              height={1217}
               alt=""
               aria-hidden="true"
               className="h-28 w-auto shrink-0 select-none sm:h-36"

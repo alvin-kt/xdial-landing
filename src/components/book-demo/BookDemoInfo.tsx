@@ -67,8 +67,8 @@ export function BookDemoInfo() {
       <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:items-end">
         <img
           src="/images/ivrrex-bookdemo-thumbsup.png"
-          width={330}
-          height={350}
+          width={983}
+          height={1105}
           alt="IVRRex, the xDial AI agent, wearing a headset and giving a thumbs up."
           className="h-auto w-[15rem] shrink-0 select-none sm:w-[17rem]"
           loading="lazy"

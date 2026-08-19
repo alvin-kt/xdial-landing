@@ -50,8 +50,8 @@ export function HowItWorksHero() {
               />
               <img
                 src="/images/ivrrex-call-flow.png"
-                width={1577}
-                height={647}
+                width={1672}
+                height={682}
                 alt="IVRRex, the xDial AI agent, on a call that runs through the phone network to an insurance company."
                 className="relative block h-auto w-full hero-art-fade select-none"
                 fetchPriority="high"

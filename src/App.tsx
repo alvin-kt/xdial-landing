@@ -7,40 +7,53 @@ import { useRouter } from '@/lib/router'
 import { BookDemoPage } from '@/pages/BookDemoPage'
 import { HomePage } from '@/pages/HomePage'
 import { HowItWorksPage } from '@/pages/HowItWorksPage'
+import { LoginPage } from '@/pages/LoginPage'
 import { SecurityPage } from '@/pages/SecurityPage'
 import { SupportPage } from '@/pages/SupportPage'
 
 /**
  * Page titles are set per route so history entries stay tellable apart.
- * Every route shares the same header and footer, except Book a Demo, which
- * builds its own minimal top bar so nothing competes with its single call
- * to action — it still gets the shared footer.
+ * Every route shares the same header and footer, except Book a Demo and
+ * Login, which build their own minimal top bar so nothing competes with
+ * their single call to action. Book a Demo still gets the shared footer;
+ * Login omits it too, since the reference design has none.
  */
 const PAGES = {
   [ROUTES.home]: {
     component: HomePage,
     title: 'xDial — Insurance Verification, Automated',
     header: true,
+    footer: true,
   },
   [ROUTES.howItWorks]: {
     component: HowItWorksPage,
     title: 'How It Works — xDial',
     header: true,
+    footer: true,
   },
   [ROUTES.security]: {
     component: SecurityPage,
     title: 'Security — xDial',
     header: true,
+    footer: true,
   },
   [ROUTES.support]: {
     component: SupportPage,
     title: 'Support — xDial',
     header: true,
+    footer: true,
   },
   [ROUTES.bookDemo]: {
     component: BookDemoPage,
     title: 'Book a Demo — xDial',
     header: false,
+    footer: true,
+  },
+  [ROUTES.login]: {
+    component: LoginPage,
+    title: 'Log In — xDial',
+    header: false,
+    footer: false,
   },
 } as const
 
@@ -69,7 +82,7 @@ export default function App() {
         <Page />
       </main>
 
-      <Footer />
+      {page.footer ? <Footer /> : null}
     </>
   )
 }

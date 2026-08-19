@@ -54,8 +54,8 @@ export function SupportHero() {
 
             <img
               src="/images/ivrrex-support-thumbsup-shirt.png"
-              width={287}
-              height={287}
+              width={1257}
+              height={1180}
               alt="IVRRex, the xDial AI agent, wearing a headset and giving a thumbs up."
               className="relative mx-auto h-auto w-[92%] max-w-[22rem] select-none"
               fetchPriority="high"
