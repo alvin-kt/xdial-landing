@@ -95,7 +95,7 @@ export function SupportForm({ category }: SupportFormProps) {
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-5">
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <label className="block">
             <span className="text-sm font-medium text-ink-900">
               {f.fullName.label}

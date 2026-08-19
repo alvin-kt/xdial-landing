@@ -21,7 +21,7 @@ export function Capabilities() {
               against our 1200px one, so ×1.25): a 13px title over a 12px
               description, which is the size step between them that gives the
               pair its hierarchy — they were the same size here. */}
-          <ul className="mt-8 grid gap-x-8 gap-y-7 sm:grid-cols-2 lg:mt-8 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-9">
+          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2 lg:mt-8 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-9">
             {CAPABILITY_ITEMS.map(({ icon: Icon, title, description }) => (
               <li key={title} className="flex gap-3">
                 <Icon

@@ -31,6 +31,17 @@
   h3,
   h4 {
     @apply font-heading text-ink-900;
+    /* Headings are short runs of text, so redistribute their own line
+       breaks to avoid a lone trailing word — cheaper and more robust than
+       tuning `max-w` per heading to dodge the same orphan. */
+    text-wrap: balance;
+  }
+
+  p {
+    /* Paragraphs are too long for `balance` (it caps out around 6 lines),
+       but still benefit from `pretty`'s narrower fix: keep the last line
+       from breaking after a single short word. */
+    text-wrap: pretty;
   }
 
   /* A single, consistent focus ring everywhere — including the dark sections,

@@ -79,7 +79,7 @@ function Mascot() {
 export function BookDemoInfo() {
   return (
     <div className="hidden flex-col md:flex">
-      <h1 className="text-pretty text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.1] font-bold tracking-tight text-white">
+      <h1 className="split-h1 text-pretty text-white">
         {BOOK_DEMO_HERO.headline.lead}
         <span className="text-brand-500">{BOOK_DEMO_HERO.headline.accent}</span>
       </h1>

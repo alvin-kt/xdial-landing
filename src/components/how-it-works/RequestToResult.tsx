@@ -15,7 +15,7 @@ export function RequestToResult() {
         <div className="rounded-2xl border border-ink-200 bg-white/70 px-6 py-8 sm:px-8 lg:px-10">
           <h2 className="text-center text-h2">{HIW_SUMMARY.heading}</h2>
 
-          <ol className="mt-8 grid gap-x-4 gap-y-8 sm:grid-cols-2 lg:flex lg:items-start lg:justify-between">
+          <ol className="mt-8 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 lg:flex lg:items-start lg:justify-between">
             {HIW_SUMMARY.steps.map((step, index) => (
               <li
                 key={step.title}

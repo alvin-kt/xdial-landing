@@ -31,7 +31,7 @@ export function HowItWorks() {
               height={118}
               alt=""
               aria-hidden="true"
-              className="mt-8 h-auto w-full max-w-[21rem] select-none pixelated lg:mt-auto lg:pt-6"
+              className="mt-8 h-auto w-full max-w-[21rem] select-none pixelated mx-auto lg:mx-0 lg:mt-auto lg:pt-6"
               loading="lazy"
               decoding="async"
               draggable={false}

@@ -56,7 +56,7 @@ export function VerificationSteps() {
                         <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-white shadow-step">
                           <ClipboardCheck aria-hidden="true" className="size-4 text-brand-600" />
                         </span>
-                        <span className="max-w-[13rem] pt-1.5">{step.note}</span>
+                        <span className="pt-1.5">{step.note}</span>
                       </p>
                     ) : null}
                   </div>

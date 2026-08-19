@@ -9,16 +9,16 @@ export function SecurityContactBanner() {
   return (
     <section className="bg-mist pb-12 lg:pb-16">
       <Container>
-        <div className="relative overflow-hidden rounded-2xl bg-brand-100/80 py-8 pr-6 sm:py-9 sm:pr-8 lg:pr-10">
+        <div className="relative overflow-hidden rounded-2xl bg-brand-100/80 px-6 pt-7 pb-6 sm:py-9 sm:pr-8 sm:pl-0 lg:pr-10">
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
-            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+            <div className="flex w-full flex-col items-start gap-4 sm:w-auto sm:flex-row sm:items-center sm:gap-6">
               <img
                 src="/images/ivrrex-security-arms-crossed.png"
                 width={1222}
                 height={1210}
                 alt=""
                 aria-hidden="true"
-                className="-my-4 h-44 w-auto shrink-0 -translate-x-2 select-none sm:h-52 lg:-my-6 lg:h-56"
+                className="h-44 w-auto shrink-0 self-center select-none sm:-my-4 sm:-translate-x-2 sm:h-52 lg:-my-6 lg:h-56"
                 loading="lazy"
                 decoding="async"
                 draggable={false}
@@ -28,7 +28,7 @@ export function SecurityContactBanner() {
                 <h2 className="text-h2">{SECURITY_CONTACT.heading}</h2>
                 <p className="mt-2 max-w-xl text-base text-ink-600">{SECURITY_CONTACT.paragraph}</p>
 
-                <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                <div className="mt-4 flex flex-col items-start gap-2 sm:mt-5 sm:flex-row sm:items-center sm:gap-4">
                   <Button asChild variant="brand" size="cta">
                     <SiteLink href={SECURITY_CONTACT.cta.href}>
                       {SECURITY_CONTACT.cta.label}

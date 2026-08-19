@@ -28,7 +28,7 @@ export function LoginInfo() {
         <Logo />
       </SiteLink>
 
-      <h1 className="mt-6 max-w-md text-[clamp(1.5rem,2.6vw,2.125rem)] leading-[1.15] font-bold tracking-tight text-pretty text-white lg:mt-7">
+      <h1 className="mt-6 max-w-md split-h1 text-pretty text-white lg:mt-7">
         <span className="block">{LOGIN_HERO.headline.line1}</span>
         <span className="block">
           {LOGIN_HERO.headline.line2}

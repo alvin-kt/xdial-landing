@@ -44,7 +44,7 @@ export function BookDemoForm() {
           <p className="mt-1 max-w-md text-sm text-ink-600">{BOOK_DEMO_FORM.paragraph}</p>
 
           <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-3">
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <label className="block">
                 <span className="text-sm font-medium text-ink-900">
                   {f.firstName.label}

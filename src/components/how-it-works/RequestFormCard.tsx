@@ -13,14 +13,14 @@ import { HIW_REQUEST_FORM } from '@/content/how-it-works'
 export function RequestFormCard() {
   return (
     <div className="overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-card">
-      <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,11rem)]">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,11rem)]">
         <div className="p-5 sm:p-6">
           <div className="flex items-center gap-2.5">
             <UserRound aria-hidden="true" className="size-5 text-brand-600" />
             <h4 className="text-h4">{HIW_REQUEST_FORM.title}</h4>
           </div>
 
-          <dl className="mt-6 grid gap-x-3 gap-y-4 sm:grid-cols-3">
+          <dl className="mt-6 grid grid-cols-1 gap-x-3 gap-y-4 sm:grid-cols-3">
             {HIW_REQUEST_FORM.fields.map((field) => (
               <div key={field.label}>
                 <dt className="text-meta text-ink-500">{field.label}</dt>

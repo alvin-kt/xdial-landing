@@ -90,6 +90,20 @@
 }
 
 /* -----------------------------------------------------------------------------
+   Split-panel headline
+   The login and book-a-demo pages each set their own H1 next to a full-height
+   image panel — smaller than the marketing hero's, since the panel takes half
+   the row instead of the wider hero split. One shared fluid scale, so the two
+   pages read as the same typographic system instead of two hand-tuned ones.
+   -------------------------------------------------------------------------- */
+@utility split-h1 {
+  font-size: clamp(1.75rem, 3.6vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* -----------------------------------------------------------------------------
    Neon speech bubbles
    Rebuilt as real text (the reference has them as flattened raster) so they
    stay crisp, selectable and translatable at any viewport size.

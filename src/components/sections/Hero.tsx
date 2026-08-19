@@ -39,7 +39,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <ul className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-4 lg:mt-10">
+            <ul className="mt-7 grid grid-cols-2 gap-x-4 gap-y-4 sm:gap-5 lg:mt-10">
               {HERO_HIGHLIGHTS.map(({ icon: Icon, title, description }) => (
                 <li key={title} className="flex items-center gap-2.5">
                   <Icon aria-hidden="true" className="size-6 shrink-0 text-brand-500" />

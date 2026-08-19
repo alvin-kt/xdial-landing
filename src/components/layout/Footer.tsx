@@ -26,8 +26,8 @@ const SOCIAL_ICONS: Record<(typeof FOOTER_SOCIAL)[number]['label'], IconComponen
 export function Footer() {
   return (
     <footer className="bg-navy-950">
-      <Container>
-        <div className="grid gap-8 pt-6 pb-5 lg:grid-cols-[minmax(0,1fr)_2.5fr] lg:gap-9 lg:pt-8 lg:pb-6">
+      <Container className="px-6 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 gap-6 pt-6 pb-4 sm:gap-8 sm:pt-6 sm:pb-5 lg:grid-cols-[minmax(0,1fr)_2.5fr] lg:gap-9 lg:pt-8 lg:pb-6">
           <div>
             <SiteLink
               href={ROUTES.home}
@@ -36,16 +36,16 @@ export function Footer() {
             >
               <Logo size="lg" />
             </SiteLink>
-            <p className="mt-3 max-w-[15rem] text-sm leading-snug text-frost-500">
+            <p className="mt-2.5 max-w-[15rem] text-sm leading-snug text-frost-500 sm:mt-3">
               {FOOTER_TAGLINE}
             </p>
 
-            <ul className="mt-3 flex items-center gap-5 border-t border-white/5 pt-3">
+            <ul className="mt-2.5 flex items-center gap-4 border-t border-white/5 pt-2.5 sm:mt-3 sm:gap-5 sm:pt-3">
               {FOOTER_BADGES.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-3">
                   <Icon
                     aria-hidden="true"
-                    className="size-9 shrink-0 text-frost-300"
+                    className="size-8 shrink-0 text-frost-300 sm:size-9"
                     strokeWidth={1.5}
                   />
                   <span className="text-sm leading-tight font-semibold text-white">
@@ -60,13 +60,13 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-4 lg:gap-x-6">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-5 sm:gap-x-5 sm:gap-y-8 sm:grid-cols-4 lg:gap-x-6">
             {FOOTER_COLUMNS.map((column) => (
               <nav key={column.heading} aria-label={column.heading}>
                 <p className="text-sm font-bold tracking-[0.08em] text-white uppercase">
                   {column.heading}
                 </p>
-                <ul className="mt-4 flex flex-col gap-3">
+                <ul className="mt-2.5 flex flex-col gap-2 sm:mt-4 sm:gap-3">
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <SiteLink
@@ -81,14 +81,14 @@ export function Footer() {
               </nav>
             ))}
 
-            <div className="col-span-2 border-white/10 sm:col-span-1 sm:border-l sm:pl-6">
+            <div className="border-white/10 sm:border-l sm:pl-6">
               <p className="text-sm font-bold tracking-[0.08em] text-white uppercase">
                 Stay Connected
               </p>
-              <p className="mt-4 max-w-[13rem] text-sm text-white/85">
+              <p className="mt-2 max-w-[13rem] text-sm text-white/85 sm:mt-4">
                 Get updates, product news, and helpful resources.
               </p>
-              <ul className="mt-4 flex items-center gap-3">
+              <ul className="mt-2.5 flex items-center gap-3 sm:mt-4">
                 {FOOTER_SOCIAL.map(({ label, href }) => {
                   const Icon = SOCIAL_ICONS[label]
                   return (
@@ -110,10 +110,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:py-4">
           <p className="text-[0.6875rem] text-frost-500">{COPYRIGHT}</p>
           <nav aria-label="Legal">
-            <ul className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <ul className="flex flex-wrap items-center gap-x-3 gap-y-1.5 sm:gap-y-2">
               {FOOTER_LEGAL_NAV.map((link, index) => (
                 <li key={link.label} className="flex items-center gap-3">
                   {index > 0 ? <span className="text-white/15">|</span> : null}

@@ -7,7 +7,7 @@ export function SecurityFeatureCards() {
   return (
     <div className="relative z-10 bg-mist">
       <Container>
-        <ul className="grid -translate-y-10 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <ul className="grid grid-cols-1 -translate-y-10 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {SECURITY_CARDS.map(({ icon: Icon, title, description }) => (
             <li
               key={title}

@@ -12,7 +12,7 @@ export function SecurityPractices() {
             <span aria-hidden="true" className="hidden h-px flex-1 bg-ink-200 sm:block" />
           </div>
 
-          <ul className="mt-8 grid gap-x-2 gap-y-10 sm:grid-cols-3 sm:divide-x sm:divide-ink-200 lg:grid-cols-6">
+          <ul className="mt-8 grid grid-cols-1 gap-x-2 gap-y-10 sm:grid-cols-3 sm:divide-x sm:divide-ink-200 lg:grid-cols-6">
             {SECURITY_PRACTICES.map(({ icon: Icon, title, description }) => (
               <li key={title} className="flex flex-col items-center px-4 text-center">
                 <Icon aria-hidden="true" className="size-11 text-brand-500" strokeWidth={1.5} />
