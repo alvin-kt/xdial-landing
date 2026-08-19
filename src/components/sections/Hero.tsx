@@ -15,7 +15,7 @@ export function Hero() {
       <Container className="relative">
         {/* The headline is the widest element in the copy column, so the split
             favours it — it must hold "Insurance Verification," on one line. */}
-        <div className="grid items-center gap-10 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.14fr)_minmax(0,1fr)] lg:gap-10 lg:py-14">
+        <div className="grid grid-cols-1 items-center gap-10 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.14fr)_minmax(0,1fr)] lg:gap-10 lg:py-14">
           {/* ------------------------------------------------------ copy -- */}
           {/* Held at the top of the row rather than centred in it: the artwork
               is now the taller column, and centring would push the headline
@@ -39,7 +39,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <ul className="mt-9 grid gap-5 sm:grid-cols-2 sm:gap-4 lg:mt-10">
+            <ul className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-4 lg:mt-10">
               {HERO_HIGHLIGHTS.map(({ icon: Icon, title, description }) => (
                 <li key={title} className="flex items-center gap-2.5">
                   <Icon aria-hidden="true" className="size-6 shrink-0 text-brand-500" />

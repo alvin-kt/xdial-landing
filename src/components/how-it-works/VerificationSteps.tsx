@@ -24,7 +24,7 @@ export function VerificationSteps() {
             {STAGES.map(({ step, Card }, index) => (
               <li
                 key={step.number}
-                className="grid gap-5 lg:grid-cols-[minmax(0,21rem)_minmax(0,1fr)] lg:gap-10"
+                className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,21rem)_minmax(0,1fr)] lg:gap-10"
               >
                 {/* ----------------------------------------- step copy -- */}
                 <div className="relative flex gap-4 lg:pb-2">

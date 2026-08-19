@@ -20,7 +20,7 @@ export function VerificationResultCard() {
           and call-details columns each carry their own action button, so the
           divider between them — and the columns' widths — run unbroken from
           the data straight through the button row. */}
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,9.25rem)_minmax(0,1fr)] lg:gap-5">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,9.25rem)_minmax(0,1fr)] lg:gap-5">
         {/* ------------------------------------------------ result badge -- */}
         <div className="flex flex-col items-center justify-center gap-4 rounded-xl bg-success-bg/70 px-3 py-8 text-center">
           <CircleCheck aria-hidden="true" className="size-14 text-success-fg" strokeWidth={1.5} />
@@ -33,7 +33,7 @@ export function VerificationResultCard() {
           </p>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,0.81fr)_minmax(0,1fr)] lg:gap-5">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,0.81fr)_minmax(0,1fr)] lg:gap-5">
           {/* -------------------------------------------------- benefits -- */}
           <div className="flex flex-col">
             <dl className="flex flex-1 flex-col justify-center">

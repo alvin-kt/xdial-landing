@@ -14,7 +14,7 @@ export function HowItWorksHero() {
       <Container className="relative">
         {/* The artwork carries its own headroom, so the section only needs a
             slim gap under the header. */}
-        <div className="grid gap-10 pt-6 pb-12 sm:pt-7 sm:pb-14 lg:grid-cols-[minmax(0,1.14fr)_minmax(0,1fr)] lg:items-end lg:gap-10 lg:pt-7 lg:pb-14">
+        <div className="grid grid-cols-1 gap-10 pt-6 pb-12 sm:pt-7 sm:pb-14 lg:grid-cols-[minmax(0,1.14fr)_minmax(0,1fr)] lg:items-end lg:gap-10 lg:pt-7 lg:pb-14">
           {/* ------------------------------------------------------ copy -- */}
           <div className="max-w-xl lg:max-w-none">
             <p className="text-eyebrow text-brand-500 uppercase">{HIW_HERO.eyebrow}</p>

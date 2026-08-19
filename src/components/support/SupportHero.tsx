@@ -11,7 +11,7 @@ export function SupportHero() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 hero-grid" />
 
       <Container className="relative">
-        <div className="grid items-center gap-10 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-10 lg:py-16">
+        <div className="grid grid-cols-1 items-center gap-10 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-10 lg:py-16">
           <div className="max-w-xl lg:max-w-none">
             <p className="text-eyebrow text-brand-500 uppercase">{SUPPORT_HERO.eyebrow}</p>
 

@@ -7,7 +7,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-mist">
       <Container>
-        <div className="grid gap-10 py-12 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-10 lg:py-14">
+        <div className="grid grid-cols-1 gap-10 py-12 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-10 lg:py-14">
           {/* ------------------------------------------------- section intro -- */}
           <div className="flex flex-col">
             <h2 className="text-h2">

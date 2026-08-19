@@ -15,8 +15,8 @@ import { SiteLink } from '@/lib/router'
  */
 export function LoginPage() {
   return (
-    <div className="flex h-dvh flex-col overflow-hidden bg-mist md:h-auto md:min-h-screen md:overflow-visible">
-      <Container className="flex flex-1 flex-col overflow-hidden md:overflow-visible">
+    <div className="flex min-h-dvh flex-col bg-mist md:min-h-screen">
+      <Container className="flex flex-1 flex-col">
         <div className="flex items-center justify-end gap-4 py-3 sm:py-5">
           <span className="hidden text-sm text-ink-600 sm:inline">
             {LOGIN_SIGNUP_PROMPT.question}
@@ -34,7 +34,7 @@ export function LoginPage() {
           </Button>
         </div>
 
-        <div className="grid flex-1 place-items-center gap-8 pb-4 md:items-stretch md:gap-10 md:pb-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:pb-8">
+        <div className="grid flex-1 grid-cols-1 place-items-center gap-8 pb-4 md:items-stretch md:gap-10 md:pb-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:pb-8">
           <LoginInfo />
 
           <div className="flex w-full flex-col items-center justify-center">

@@ -31,7 +31,7 @@ export function BookDemoPage() {
           </SiteLink>
         </div>
 
-        <div className="grid flex-1 gap-10 pb-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-14 lg:pb-4">
+        <div className="grid flex-1 grid-cols-1 gap-10 pb-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-14 lg:pb-4">
           <BookDemoInfo />
           <BookDemoForm />
         </div>
