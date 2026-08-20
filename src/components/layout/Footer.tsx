@@ -19,9 +19,9 @@ const SOCIAL_ICONS: Record<(typeof FOOTER_SOCIAL)[number]['label'], IconComponen
 }
 
 /**
- * The one footer every page shares — canonically the Security page's design:
- * dark, multi-column, with the HIPAA/BAA badges under the tagline. See
- * `content/navigation.ts` for the shared columns, badges and legal links.
+ * The one footer every page shares: dark, multi-column, with the HIPAA/BAA
+ * badges under the tagline. See `content/navigation.ts` for the shared
+ * columns, badges and legal links.
  */
 export function Footer() {
   return (

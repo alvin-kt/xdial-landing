@@ -8,7 +8,6 @@ import { BookDemoPage } from '@/pages/BookDemoPage'
 import { HomePage } from '@/pages/HomePage'
 import { HowItWorksPage } from '@/pages/HowItWorksPage'
 import { LoginPage } from '@/pages/LoginPage'
-import { SecurityPage } from '@/pages/SecurityPage'
 import { SupportPage } from '@/pages/SupportPage'
 
 /**
@@ -28,12 +27,6 @@ const PAGES = {
   [ROUTES.howItWorks]: {
     component: HowItWorksPage,
     title: 'How It Works — xDial',
-    header: true,
-    footer: true,
-  },
-  [ROUTES.security]: {
-    component: SecurityPage,
-    title: 'Security — xDial',
     header: true,
     footer: true,
   },

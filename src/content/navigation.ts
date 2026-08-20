@@ -6,7 +6,6 @@ import type { IconComponent, NavLink } from './types'
 export const ROUTES = {
   home: '/',
   howItWorks: '/how-it-works',
-  security: '/security',
   support: '/support',
   bookDemo: '/book-a-demo',
   login: '/login',
@@ -21,15 +20,14 @@ export const ROUTES = {
 export const PRIMARY_NAV = [
   { label: 'Insurance Verification', href: ROUTES.home },
   { label: 'How It Works', href: ROUTES.howItWorks },
-  { label: 'Security', href: ROUTES.security },
   { label: 'Support', href: ROUTES.support },
 ] as const satisfies readonly NavLink[]
 
 export const COPYRIGHT = '© 2025 xDial AI, LLC. All rights reserved.'
 
 /* -----------------------------------------------------------------------------
-   The one footer every page shares — canonically the Security page's design:
-   dark, multi-column, with the HIPAA/BAA badges under the tagline.
+   The one footer every page shares: dark, multi-column, with the HIPAA/BAA
+   badges under the tagline.
    -------------------------------------------------------------------------- */
 
 export const FOOTER_TAGLINE =
